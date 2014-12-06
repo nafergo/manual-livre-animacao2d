@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Manual Livre de Blender" /> 
+<meta name="keywords" content="Blender, Free Software, Libre Software, Open Source, Free Culture, Animation, 3D, Animação, Illustration, Ilustração, Education, Educação, Software Livre, VFX, Efeitos especiais, Visual Effects, CGI, 3D printing, impressão 3D">
+<meta name="author" content="nafergo" >
+<meta charset="UTF-8">
+<title>Manual Livre de Blender</title>   
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/mine.css" media="all" />	
+
+</head>
+
+
+<body>
+<div id="topo"></div>
+
+<!-- início do menu -->
+
+	<div data-include="menu.html"></div>
+
+<!-- fim do menu -->
+
+<div class="container-fluid">
+	<div class="row">
+   	<div class="col-xs-10 col-xs-offset-1">
+			<h1 class="titulopagina">Introdução à renderização <small>no Blender</small></h1>
+      	
+      	<div class="page-header">
+				<h2>Definição</h2>
+      	</div>
+           	<p><strong>      	
+Renderização</strong> (Rendering) significa processamento digital. 
+Em 3D, descreve o processo de conversão de dados 3D numa imagem bidimensional, 
+criação de uma imagem a partir de um modelo ou cena através de um software específico. O ficheiro 3D armazena dados sobre geometria, ponto de vista, perspetiva, iluminação, materiais, etc. O software de renderização interpreta esses dados e cria a sua tradução em 2D.
+</p>
+
+
+
+      	<div class="page-header">
+				<h2>Blender Render, Cycles e Freestyle</h2>
+      	</div>
+      	
+
+
+<p>Cycles é o nome de um novo motor de renderização do Blender. Disponível desde o Blender 2.61, o Cycles ainda está em desenvolvimento. No entanto, o elevado nível de maturação entretanto atingido permite já a sua utilização em produção.</p>
+
+
+      	<div class="page-header">
+				<h2>Alguns termos e conceitos importantes</h2>
+      	</div>
+
+      	<p>      	
+Os motores de renderização são muitas vezes distinguidos entre <strong>unbiased</strong> e <strong>biased</strong>. Unbiased rendering engines 
+são softwares que baseiam a sua síntese de imagem nos princípios da física, são fisicamente corretos. Renders são mais realistas mas mais morosos.</p>
+
+      	<p><strong>      	
+Render farm</strong> é um cluster de computadores criado para renderizar 
+um projeto (geralmente, de animação ou vfx). Estes computadores podem renderizar várias frames em simultâneo ou renderizar partes de uma mesma frame (bucket rendering).</p>
+
+      <ul>
+<li>Queue manager: software que distribui automaticamente os processos entre os vários processadores disponíveis.</li>
+
+<li>Slave ou Render node: sistema que tem como função processar tarefas de renderização.</li>
+
+<li>Master: sistema que coordena a rede.</li>
+
+<li>Client: sistema que submete tarefas de renderização.</li>
+     </ul>      	
+     
+
+     <div class="row">
+			   	<div class="col-xs-6 col-xs-offset-3">
+			<div class="well embed-responsive embed-responsive-16by9">
+			<iframe width="640" height="360" src="http://www.youtube.com/embed/4VUWrZRCtI8?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>			   	
+			   	</div>
+
+</div>
+     
+     
+     
+
+
+      	<p><strong>
+GPU (Graphics Processing Unit) rendering</strong> é o processo que permite utilizar a placa gráfica em vez do
+ processador central do computador (CPU) para renderizar. Geralmente, é mais rápido a renderizar (embora dependa da placa) mas pode suscitar problemas
+  em cenas mais complexas pelos limites de memória da placa.</p> 
+
+
+
+     <div class="row">
+			   	<div class="col-xs-6 col-xs-offset-3">
+			<div class="well embed-responsive embed-responsive-16by9">
+			<iframe width="640" height="360" src="http://www.youtube.com/embed/Rd0lDJ51FVk?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>			   	
+			   	</div>
+
+</div>
+
+
+      	<div class="page-header">
+				<h2>Funcionalidades úteis</h2>
+      	</div>
+
+<h3>Slots de render </h3>
+
+<p>As slots para renderização são uma funcionalidade extremamente útil para comparar facilmente entre resultados.</p>
+
+<p>Sempre que renderiza, se não fizer qualquer alteração, o Blender armazena o seu render na Slot 1. É esta a slot escolhida ou ativada por pré-definição. </p>
+
+<p>No entanto, se, na janela UV/Image Editor (na janela onde surge o seu render), escolher outra slot (ver imagem abaixo), o render seguinte vai ser armazenado na slot escolhida. Isto permite ter vários renders em slots diferentes e comparar rapidamente entre diversos resultados.</p>
+
+<img src="img/img41/12algumas_dicas53ee8429.png" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<h3>Play renderização</h3>
+
+<p>Quando renderiza várias frames de uma animação, para ver o resultado animado não é necessário renderizar em formato vídeo, pode utilizar o atalho 
+Ctrl + F11 ou a opção Play Rendered Animation (menu Render, disponível no topo). </p>
+
+
+
+<p>As frames que estiverem na pasta Output irão ser exibidas nas FPS definidas.</p>
+
+<p>Por pré-definição, o Blender utiliza o seu próprio player mas é possível utilizar outros players externos. Na imagem abaixo é possível ver que o Blender está configurado para utilizar o player <a href="http://djv.sourceforge.net/" target="_blank">Djv</a>.</p>
+
+<img src="img/img41/19algumas_dicas7d22287e.png" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<h3>Render Border</h3>
+
+<p>A opção Render Border permite renderizar apenas uma parte da imagem. </p>
+
+<p>Em modo de visão de câmara, clique em CTRL+B e desenhe um retângulo com a parte que pretende renderizar.</p>
+
+<img src="img/img41/22algumas_dicas413c5010.png" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/img41/23algumas_dicas39ee60.png" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/img41/24algumas_dicas3ec6e092.png" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/img41/25algumas_dicas2ef85c63.png" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Para remover a Render Border, clique em CTRL+B e desenhe um retângulo que inclua a totalidade da vista da câmara.</p>
+
+<img src="img/img41/26algumas_dicas56d47e9a.png" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<h3>Boom Smash</h3>
+<p>Ver texto sobre <a href="boom_smash.html">Boom Smash</a>.</p>
+
+
+
+      	<div class="page-header">
+				<h2>Material adicional recomendado</h2>
+      	</div>
+
+
+     <p> 	
+<a href="http://www.3dtotal.com/index_tutorial_detailed.php?id=705#.Tw8KpqtLs5Y" target="_blank">Resolution and Compression</a>
+</p>
+<p>
+<a href="http://www.3dtotal.com/index_tutorial_detailed.php?id=862#.Tw8KtatLs5Y" target="_blank">72 DPI or 300 DPI</a>
+</p>
+<p>
+<a href="http://3d.about.com/od/3d-101-The-Basics/a/Rendering-Finalizing-The-3d-Image.htm" target="_blank">What is Rendering?</a>
+</p>
+<p>
+<a href="http://www.fxguide.com/featured/the-art-of-rendering/" target="_blank">The Art of Rendering</a>
+   </p>   	
+      	
+
+   	</div>
+	</div>
+</div> <!-- /container -->
+
+
+<!-- início do footer -->
+
+	<div data-include="footer.html"></div>
+
+<!-- fim do footer -->
+    
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+    	<script src="js/csi.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip();
+            });
+        </script>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+
+    
+  </body>
+</html>

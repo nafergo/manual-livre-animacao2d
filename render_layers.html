@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Manual Livre de Blender" /> 
+<meta name="keywords" content="Blender, Free Software, Libre Software, Open Source, Free Culture, Animation, 3D, Animação, Illustration, Ilustração, Education, Educação, Software Livre, VFX, Efeitos especiais, Visual Effects, CGI, 3D printing, impressão 3D">
+<meta name="author" content="nafergo" >
+<meta charset="UTF-8">
+<title>Manual Livre de Blender</title>   
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/mine.css" media="all" />	
+
+</head>
+
+
+<body>
+<div id="topo"></div>
+
+<!-- início do menu -->
+
+	<div data-include="menu.html"></div>
+
+<!-- fim do menu -->
+
+
+<div class="container-fluid">
+<div class="row">
+		
+   	<div class="col-xs-10 col-xs-offset-1">
+    
+<h1 class="titulopagina">Render Layers</h1>
+
+
+      	<div class="page-header">
+				<h2>Configuração básica</h2>
+      	</div>
+
+<p>As Render Layers permitem organizar a renderização por "camadas", facilitando o isolamento de elementos. As camadas são 
+depois combinadas no editor de nós para criar a imagem final.</p>
+
+
+<p>1- Para a demonstração que se segue, foi criada a cena abaixo. A cena é composta por um fundo (layer 1), um dado (layer 2), 
+um objeto estranho (layer 3), a Suzanne (layer 4) e uma luz Sun (está simultaneamente nas layers 1, 2, 3, 4 e 0).</p>
+
+<img src="img/renderlayers/cena.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>2- No painel Render Layers foram criadas mais 3 Render Layers e renomeadas todas as 4. A imagem abaixo mostra a configuração 
+da Render Layer suzanne. </p>
+<p>O primeiro conjunto de 20 caixas (lado esquerdo, topo) identifica as layers que fazem parte da cena. No nosso caso, a cena tem objetos 
+espalhados pelas 4 primeiras layers. Ou seja, todas as nossas Render Layers têm as 4 primeiras layers da Scene ativadas.</p>
+<p>O segundo conjunto de 20 caixas (lado direito, topo) identifica as layers que vão ser ser incluídas na imagem renderizada desta 
+Render Layer. Ou seja, no nosso caso, como pretendemos isolar os 4 elementos (fundo, dado, objeto estranho e Suzanne), cada Render 
+Layer só tem uma Layer ativada. A Render Layer suzanne só tem ativada a Layer onde está a Suzanne, a Render layer fundo só tem 
+ativada a Layer onde está o fundo, etc.</p>
+
+<img src="img/renderlayers/layers.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>3 - No painel Render, ative Transparent para que cada Render Layer seja renderizada com fundo transparente.</p>
+
+<img src="img/renderlayers/fundo_transparente.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>4- Clique em Render para renderizar as várias Render Layers.</p>
+ 
+<img src="img/renderlayers/fundo.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/dado.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/estranho.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/suzanne.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>5- Escolha a janela do Node Editor. Clique para ativar Compositing Nodes, Use Nodes e Backdrop. Vamos utilizar 4 nós de 
+Render Layers (Input) e 3 Alpha Over (Color) para combinar as Render Layers.</p>
+
+<p>Primeiro vamos combinar a Render Layer fundo com a Render Layer dado utilizando um nó Alpha Over.</p>
+
+<img src="img/renderlayers/comp1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Depois combinamos as restantes Render Layers seguindo a mesma lógica.</p>
+<img src="img/renderlayers/comp2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>
+6- Agora é possível manipular cada Render Layer isoladamente. Por exemplo, na imagem abaixo utilizámos um nó Hue Saturation Value 
+(Color) para modificar a matiz (Hue) na Render Layer suzanne. Repare que o reflexo da Suzanne no fundo continua verde :) porque 
+a manipulação da matiz só se aplica ao conteúdo da Render Layer suzanne e o fundo está noutra Render Layer.
+</p>
+
+<img src="img/renderlayers/comp3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+      	<div class="page-header">
+				<h2>Outras opções</h2>
+      	</div>
+      	    	
+<img src="img/renderlayers/maisopcoeslayers.jpg" alt="..." class="img-responsive img-thumbnail center-block">      	
+
+      <dl class="dl-horizontal">
+        <dt>Exclude</dt>   <dd>Permite excluir Layers da Render Layer (exemplo abaixo)</dd>
+        <dt>Mask Layer</dt>   <dd>Permite utilizar Layers como máscaras (exemplo abaixo)</dd>
+        <dt>Material</dt>   <dd>Permite definir um material que sobrepõe aos existentes na Render Layer. Veja um exemplo no texto sobre <a href="clayrender.html">Clay render</a>.</dd>
+        <dt>Samples</dt>   <dd>Permite definir um número de Samples para a Render Layer diferente do definido no painel Render. Deste 
+        modo, por exemplo, pode definir 200 Samples para a renderização global e 500 para a renderização de uma Render Layer.</dd>
+        <dt>Use Environment</dt>   <dd>Permite (des)ativar utilização de Environment na Render Layer (exemplo abaixo)</dd>
+        <dt>Use Hair</dt>   <dd>Permite (des)ativar utilização de Hair</dd>                                                
+        </dl>
+
+<h3>Exclude</h3>      	
+<p>Render resultante da combinação apresentada anteriormente.</p>
+<img src="img/renderlayers/use_env1.jpg" alt="..." class="img-responsive img-thumbnail center-block">      	
+
+<p>Novo render mas depois de utilizarmos o Exclude para excluir da Render Layer fundo o conteúdo da Scene Layer onde está o dado. Ou seja, os reflexos e sombras 
+do dado, que eram visíveis na Render Layer fundo, deixam de ser visíveis porque a sua razão de existência foi excluída. 
+Os reflexos e as sombras eram visíveis porque a Layer do dado existia para a Render Layer fundo.</p>
+<img src="img/renderlayers/exclude1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/exclude2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<h3>Mask Layer</h3>
+<p>Para demonstrar a utilidade da Mask Layer, inserimos um novo objeto à frente do dado. Este novo 
+objeto está na Scene Layer 5. Na Render Layer dado foi também ativada a Layer 5.</p>
+<img src="img/renderlayers/mask1.jpg" alt="..." class="img-responsive img-thumbnail center-block">      	
+<img src="img/renderlayers/mask2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Se a Layer 5 não for ativada numa Render Layer, o objeto não será visível. No entanto, como faz parte da Scene (está ativa nas 
+Scene Layers) ela está presente. Repare que a sombra do objeto surge no chão.</p>
+<img src="img/renderlayers/mask3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/mask4.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Finalmente, na Render Layer dado, utilizamos a Scene Layer 5 como Mask Layer. O resultado é o "recortar", na 
+Render Layer dado, do conteúdo (os objetos) presente na Scene Layer 5.</p>
+<img src="img/renderlayers/mask5.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/mask6.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<h3>Use Environment</h3>
+<p>Render resultante da combinação apresentada anteriormente.</p>
+<img src="img/renderlayers/use_env1.jpg" alt="..." class="img-responsive img-thumbnail center-block">      	
+
+<p>Novo render mas depois de alterarmos a cor do Background no painel World.</p>
+<img src="img/renderlayers/use_env2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Novo render (também com a nova cor do Background) mas depois de desativado o Use Enviroment para a Render Layer estranho..</p>
+<img src="img/renderlayers/use_env3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/renderlayers/use_env.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+		</div>
+		
+		 </div>
+
+ </div>
+
+   <!-- início do footer -->
+
+	<div data-include="footer.html"></div>
+
+<!-- fim do footer -->
+    
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+    	<script src="js/csi.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip();
+            });
+        </script>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+
+
+
+
+</body>
+</html>

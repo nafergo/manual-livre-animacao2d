@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Manual Livre de Blender" /> 
+<meta name="keywords" content="Blender, Free Software, Libre Software, Open Source, Free Culture, Animation, 3D, Animação, Illustration, Ilustração, Education, Educação, Software Livre, VFX, Efeitos especiais, Visual Effects, CGI, 3D printing, impressão 3D">
+<meta name="author" content="nafergo" >
+<meta charset="UTF-8">
+<title>Manual Livre de Blender</title>   
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/mine.css" media="all" />	
+
+</head>
+
+
+<body>
+<div id="topo"></div>
+
+<!-- início do menu -->
+
+	<div data-include="menu.html"></div>
+
+<!-- fim do menu -->
+
+
+<div class="container-fluid">
+	<div class="row">
+   	<div class="col-xs-10 col-xs-offset-1">
+			<h1 class="titulopagina">APM Fluffy Monsters - Episódio 1</h1>
+			<h1><small>Olhos, piscar os olhos, Dynamic Effects no Graph Editor e Lattices</small></h1>
+      	
+
+     
+     
+     
+     
+       <div class="row">
+			   	<div class="col-xs-6 col-xs-offset-3">
+			   				   	<h4>APM Fluffy Monsters - Episódio 1</h4>
+			<div class="well embed-responsive embed-responsive-16by9">
+			<iframe width="640" height="360" src="http://www.youtube.com/embed/mfyvwA0ts4Y" frameborder="0" allowfullscreen></iframe>
+			</div>	   	
+			   	</div>
+			   	</div>     
+
+      	<div class="page-header">
+				<h2>Olhos</h2>
+      	</div>
+
+<p>Os olhos das personagens foram criados utilizando métodos diferentes: com textura de imagem e com materiais procedimentais. </p>
+
+
+<p>Os olhos verdes foram criados com uma textura de imagem. É basicamente uma esfera com uma ligeira saliência num dos lados (criada com Proportional Edit).</p>
+
+<p>Foi feito um Unwrap depois de criado um Seam (veja o círculo vermelho na imagem abaixo) para mapear corretamente a textura à esfera.</p>
+
+<p>Como os olhos têm brilho e reflexo, o material final mistura Diffuse com Glossy. O Mix Shader controla a quantidade de Diffuse e de Glossy.</p>
+
+<img src="img/apm_fluffy_friends/ep1/olho_verde.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<img src="img/apm_fluffy_friends/ep1/olho_template.png" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Para facilitar a criação de texturas de olhos similares mas com cores diferentes, descarregue o <a href="img/apm_fluffy_friends/ep1/olho_template.xcf">template do olho</a> para GIMP.
+
+
+<p>Os olhos azuis foram criados sem qualquer imagem, apenas com materiais. A esfera (similar à do olho verde) tem três materiais: sclera, iris e pupil. Estes materiais 
+correspondem à Esclera (branco do olho), íris e pupila. Em todos os materiais foram utilizados shaders Glossy para criar o brilho/reflexo.</p>
+
+
+<p>O material da esclera inclui uma textura Wave para misturar branco e vermelho, permitindo criar olhos raiados de sangue.</p>
+<img src="img/apm_fluffy_friends/ep1/olho_azul_sclera.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/apm_fluffy_friends/ep1/olho_azul_sclera2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>O material da íris é criado misturando dois tons de azul.</p>
+     
+<img src="img/apm_fluffy_friends/ep1/olho_azul_iris.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>O material da pupila é simplesmente preto.</p>
+<img src="img/apm_fluffy_friends/ep1/olho_azul_pupil.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Consulte o texto <a href="6uv_mapping.html">UV Mapping de uma lata</a> e <a href="materiais_no_cycles.html">Materiais no Cycles</a> para obter mais informação sobre UV e materiais.</p>
+
+
+
+
+
+      	<div class="page-header">
+				<h2>Piscar os olhos</h2>
+      	</div>
+      	
+      	<h3>Quando piscar os olhos?</h3>
+      	
+      	<p>De acordo com a ciência, o ser humano normal pisca os olhos 15-20 vezes por minuto (a cada 3-4 segundos). Isso não significa que a sua personagem deve piscar estas vezes todas!!! Utilize 
+      	o piscar de olhos quando a personagem mover a cabeça, quando estiver a pensar em algo e quando estiver a olhar fixamente durante algum tempo.</p>
+      	<p>Algumas notas interessantes sobre animar o piscar 
+      	de olhos <a href="http://www.carlosbaena.com/resource/anim_Blinks.html" target="_blank">aqui</a>.</p>
+
+
+
+
+
+	<h3>E como piscar?</h3>
+	
+	<h4>Piscadela normal</h4>
+	<p>2-1-3 = 2 frames para fechar, 1 frame fechado e 3 para abrir. Leva mais tempo a abrir do que a fechar.</p>
+	<p>Pode ver <a href="http://blog.digitaltutors.com/animating-believable-eye-blinks/" target="_blank">aqui</a> uma imagem que representa estes tempos. A pose 1 e 7 são iguais.</p>
+
+	<h4>Piscadela rápida</h4>
+	<p>2-3 = 2 frames para fechar e 3 para abrir.</p>
+	
+	<h4>Muito rápida</h4>
+	<p>1-2:  frame para fechar e 2 para abrir. Não fecha totalmente. Conhece a expressão "fazer olhinhos"? Imagine várias piscadelas muito rápidas...</p>
+
+	<h4>Piscadela longa</h4>
+	<p>3-3-4: 3 frames para fechar, 3 frame fechado e 4 para abrir</p>
+
+
+
+      	<h3>Como animar o piscar de olhos?</h3>
+      	
+      	<p>Existem várias possibilidades com graus de dificuldade e sofisticação diferentes. Obviamente, o piscar de olhos também depende da geometria existente. Cada um dos olhos 
+      	dos nossos monstros é composto por 4 objetos: base, olho, pálpebra superior e pálpebra inferior. O piscar de olhos é criado pela rotação das pálpebras superior e inferior.</p>
+      	
+      	<p>A base do olho é uma meia esfera com Extrudes para criar um braço que liga ao corpo do monstro. Foi utilizado o modifier Solidify para dar alguma espessura. Esta base está 
+      	aparentada ao corpo.</p>
+      	
+      	<p>As pálpebras são meias esferas que estão aparentadas à base e que que rodam sobre si mesmas. Para facilitar a rotação, a Origin das pálpebras está alinhada com a Origin do 
+      	olho. Na realidade, as pálpebras foram criadas a partir de um duplicado do olho com um Scale muito suave que foi depois dividido em duas partes.</p>
+      	
+      	<p>Os olhos estão aparentados à base.</p>
+
+
+
+<img src="img/apm_fluffy_friends/ep1/olho1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<img src="img/apm_fluffy_friends/ep1/olho2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+
+      	<div class="page-header">
+				<h2>Dynamic Effects no Graph Editor</h2>
+      	</div>
+
+<p>Em primeiro lugar, foi criada a animação do peso com 2 keyframes de Location: posição inicial (peso está fora do enquadramento) e posição final (peso já caiu e está em repouso).</p>
+
+<img src="img/apm_fluffy_friends/ep1/bounce1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<img src="img/apm_fluffy_friends/ep1/bounce2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<p>No Graph Editor, por pré-definição, temos o peso animado com uma interpolação Bezier. Isto significa que o peso acelera no início e desacelera no final. Esta 
+acelaração e desaceleração é bastante irrealista e nós pretendemos que no final o peso ressalte quando bater no chão.</p>
+<img src="img/apm_fluffy_friends/ep1/bounce3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>Com as duas keyframes de Location em Z selecionadas, foi ativada a opção Bounce (Dynamic Effects) para criar um ressalto. Depois escolhemos Ease Out porque pretendemos que 
+o ressalto surja no final, surja antes da última keyframe. Se necessário ou desejar, pode manipular as keyframes ou inserir novas keyframes para melhorar o efeito.</p>
+<img src="img/apm_fluffy_friends/ep1/bounce4.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<img src="img/apm_fluffy_friends/ep1/bounce5.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+
+<p>Consulte o texto <a href="26bola_saltitona.html">Bola saltitona</a> para obter mais informação sobre animação.</p>
+
+
+      	<div class="page-header">
+				<h2>Lattices</h2>
+      	</div>
+
+<p>1. Em primeiro lugar foi adicionada uma Lattice com várias subdivisões.</p>
+<img src="img/apm_fluffy_friends/ep1/lattice0.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>2. Depois foi adicionado o modifier Lattice a todos os objetos que irão ser deformados (vários objetos do olhos).</p>
+<img src="img/apm_fluffy_friends/ep1/lattice01.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>3. Finalmente, foi manipulada a Lattice (em Edit Mode) para criar o efeito.</p> 
+
+<p>Importa referir que o corpo do "olhos azuis", o monstro esmagado, é animado com keyframes de Scale. Ou seja, foi 
+inserida uma keyframe de Scale no corpo do monstro com olhos azuis durante cada frame da animação do peso. Deste modo, a animação de Scale do corpo do monstro está de acordo com 
+o posicionamento do peso.</p>
+
+<p>Depois de feita a animação do corpo, na última keyframe, foi manipulada a forma 
+da Lattice para obtermos a posição final. Por fim, foi animada a Lattice (com keyframes de Location) para acompanhar o peso. Ou seja, foi inserida uma keyframe de Location na 
+Lattice durante cada frame da animação do peso.</p>
+<img src="img/apm_fluffy_friends/ep1/lattice1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<img src="img/apm_fluffy_friends/ep1/lattice2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Consulte o texto <a href="34modifiers.html">Modifiers</a> para obter mais informação sobre Lattices.</p>
+    
+
+   	</div>
+	</div>
+</div> <!-- /container -->
+
+
+
+<!-- início do footer -->
+
+	<div data-include="footer.html"></div>
+
+<!-- fim do footer -->
+    
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+    	<script src="js/csi.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip();
+            });
+        </script>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+
+    
+  </body>
+</html>
