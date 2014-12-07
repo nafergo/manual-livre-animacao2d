@@ -6,50 +6,7 @@ body {
  
 
  
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-	.navbar-inverse .navbar-nav > li > a {
-    	font-size: 0.5em;}
-   .dropdown-menu li {
-    	font-size: 0.65em;}
-   .logotipo {width: 35px;} 
- }
 
-@media (min-width: 830px) {
-	.navbar-inverse .navbar-nav > li > a {
-    	font-size: 0.60em;}
-   .dropdown-menu li {
-    	font-size: 0.75em;}
-   .logotipo {width: 35px;} 
- }
-
-@media (min-width: 925px) {
-	.navbar-inverse .navbar-nav > li > a {
-    	font-size: 0.70em;}
-   .dropdown-menu li {
-    	font-size: 0.70em;}
-   .logotipo {width: 35px;} 
- }
-
-
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    .navbar-inverse .navbar-nav > li > a {
-    	font-size: 0.75em;}
-    .dropdown-menu li {
-    	font-size: 0.95em;}
-    .logotipo {width: 65px;} 
- }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    .navbar-inverse .navbar-nav > li > a {
-    	font-size: 0.99em;}
-    .dropdown-menu li {
-    	font-size: 1em;}
-    .logotipo {width: 100%;} 
- }
 
 
 
@@ -95,7 +52,7 @@ footer {
 	}
 
 
-//imagens usam isto
+/*imagens usam isto*/
 .center-block {
   display: block;
   margin-left: auto;
@@ -106,19 +63,16 @@ footer {
 	margin-bottom: 20px;
 	}
 	
-	.capa {
-	margin-top: 100px;
-}
 
-//primeira pagina usa isto
+/*primeira pagina usa isto*/
 
 .titulohomepage {
-	margin-bottom: 20px;
 	text-align: center;
+	color:#000;
+	text-shadow: -5px 5px 5px rgba(0,0,0, 0.3);
 }
 
 .titulopagina {
-	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
@@ -127,7 +81,11 @@ footer {
 	height: 64px;
 }
 
-// fix horizontal scroll
+.logotipo {
+	height: 99%;
+}
+
+/* fix horizontal scroll*/
 
 .row {
   margin-left: 0px;
