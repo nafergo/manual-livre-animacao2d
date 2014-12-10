@@ -1,4 +1,4 @@
-manual-livre-blender
+manual-livre-animacao2d
 ====================
 
 Manual Livre de Animação em 2D (2D Animation Libre Manual) - portuguese language only
