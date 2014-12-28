@@ -5,7 +5,7 @@
 
 <meta name="description" content="Manual Livre de Animação 2D" /> 
 <meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
-<meta name="author" content="nafergo" >
+<meta name="author" content="nelson gonçalves" >
 <meta charset="UTF-8">
 <title>Manual Livre de Animação em 2D</title>   
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -44,9 +44,7 @@
   					<li><a href="#geral">Aspeto geral</a></li>
   					<li><a href="#interacao">Interação básica</a></li>
   					<li><a href="#ficheiros">Gestão e organização</a></li>  					
-  					<li><a href="#configuracoes">Configurações</a></li>
-  					<li><a href="#sugestoes">Algumas sugestões relativas ao aspeto e interação</a></li>
-  					<li><a href="#screencast">Captura de ecrã: screencast e screenshot</a></li>  					  					
+  					<li><a href="#sugestoes">Alterar interface</a></li>
 					</ul>				
 					</div>   	
    	
@@ -58,62 +56,63 @@
 				<h2>Aspeto geral</h2>
                 
       </div>
-      
-
-
-<h3>Interface inicial</h3>
+     
 
  			 <img src="img/interface/tupi/tupi_interface.png" alt="..." class="img-responsive img-thumbnail center-block">   
 
 <dl class="dl-horizontal">
   <dt>1</dt>
-  <dd>Ár</dd>
+  <dd>Menu de projeto: criar novo projeto, abrir projeto já existente, gravar projeto, gravar 
+  projeto como... e fechar projeto.</dd>
 
   <dt>2</dt>
-  <dd>Identificação da vista atual na janela 3D View.</dd>
+  <dd>Abas que permitem alternar entre os modos de trabalho. Também pode utilizar o menu de topo 
+  (Módulos). De momento, permite alternar entre Animação 
+  (principal área de trabalho) e Reprodução (para visualização).</dd>
 
   <dt>3</dt>
-  <dd>Menu qs ou eliminar/apagar.</dd>
+  <dd>Barra de ferramentas do topo. Permite acesso a ferramentas para desfazer (undo) & 
+  refazer (redo), copiar & colar, cortar & apagar, agrupar & desagrupar. Permite ainda 
+  definir o número de frames seguintes e anteriores sobrepostas (onion skin) e opacidade, 
+  modo de trabalho (modo frames, fundo estático e fundo dinâmico), exportar a frame atual, 
+  ativar exportação de storyboard e deteção de câmara (para animação stopmotion).</dd>
 
   <dt>4</dt>
-  <dd>Menu que. Um ficheiro pode ter várias
-Scenes.</dd>
+  <dd>Acesso às janelas de configuração das paletas de cor, propriedades da caneta e 
+  biblioteca de objetos.</dd>
   
   <dt>5</dt>
-  <dd>Menu de  ou ativar o Network Render (para criar uma renderfarm) é neste
-menu que escolhe qual pretende utilizar.</dd>
+  <dd>Principal menu de ferramentas de trabalho. Inclui submenus para ferramentas de desenho, 
+  de seleção, de preenchimento, de visualização/zoom e de tweening (interpolação automática).</dd>
 
 
   <dt>6</dt>
-  <dd>Área com ie do objeto selecionado.</dd>
+  <dd>Algumas das ferramentas de trabalho são configuráveis através de um painel de propriedades. 
+  Este painel é diferente consoante a ferramenta selecionada.</dd>
 
   <dt>7</dt>
-  <dd>Lâmpada (de tiente por pré-definição.</dd>
+  <dd>Janela de gestão de camadas (layers) e frames (quadros).</dd>
 
   <dt>8</dt>
-  <dd>Câmara que é adicionada automaticamente por pré-definição.</dd>
+  <dd>Acesso ao gestor de cenas (um projeto pode ter várias cenas), folha de 
+  exposição (exposure sheet ou X-sheet - é a janela que está aberta por 
+  pré-definição) e ajuda.</dd>
     
 	<dt>9</dt>
-  <dd>Câmara que é adicionada automaticamente por pré-definição.</dd>
+  <dd>Ativa modo Timeline (linha de tempo), o que substitui necessidade da X-sheet, e ativação 
+  da consola para debug (desenvolvimento/programação).</dd>
     
 
 	<dt>10</dt>
-  <dd>Câmara que é adicionada automaticamente por pré-definição.</dd>
+  <dd>Barra de ferramentas do rodapé. Inclui ativação de área segura e grelha (ajudas para 
+  composição), modo Full Screen, frame atual, Zoom, rotação da área de trabalho, ativação de 
+  anti-aliasing, cor de fundo, cor do pincel e ferramenta ativa.</dd>
     
     
 </dl>
 
-<h3>Modificar o aspeto da interface e Temas</h3>
-<p>
-janbelas flutuantes
- </p>
-<p>temas---
-</p>
-<p>
-opçoes em baixo. abrir janelas/bartras our fechar
-</p>
 
-	
+
 
 </div>
 
@@ -125,197 +124,29 @@ opçoes em baixo. abrir janelas/bartras our fechar
                 
       </div>
 
+<h3>Atalhos principais</h3>
 
-<h3>Search</h3>
-
-<p>A janela de pesquisa (clique em Spacebar quando o cursor do rato estiver na janela 3D View) é uma forma rápida
- de aceder às opções e funcionalidades disponíveis. É sobretudo útil quando não se lembra do nome ou do local onde essas opções e funcionalidades estão disponíveis.</p>
-
-<p>Comece a escrever uma parte do nome da opção ou funcionalidade e o Blender irá apresentar algumas sugestões relacionadas com o termo utilizado na sua pesquisa.</p>
-
-<img src="img/introducao/blender/interface/20algumas_dicas20d582a0.png" alt="..." class="img-responsive img-thumbnail center-block">
-<img src="img/introducao/blender/interface/21algumas_dicas6d50059b.png" alt="..." class="img-responsive img-thumbnail center-block">
-
-
-<h3>Perspetivas e Visão</h3>
-<p>
-Por pré-definição, o Blender abre com um cubo em perspetiva (ver número 2 na legenda).
-</p> 
-<p>
-Clicando no botão no meio do rato (BMR), na “roda para fazer scroll”, ativa a visão livre em perspetiva.	
-Clicar no BMR (Botão do Meio no Rato) + Shift permite deslocar o plano com o rato ficando a perspetiva estacionária. 
-Se rodar a “roda para fazer scroll”, aproxima ou afasta a sua visão.
-	</p>
-
-
-<p>Atalhos do Numpad:</p>
 <ul>
-<li>7, 1 e 3: visão de Topo, Frente e Direita</li>
-<li>Ctrl + 7, 1 e 3: Visão do Fundo, Trás e Esquerda</li>
-<li>8, 2, 4 e 6: altera a visão com incrementos fixos, rodando para cima, baixo, esquerda ou direita</li>
-<li>5: Alterna entre visão Perspective/Perspetiva (com profundidade) e Orthographic/Ortogonal (sem profundidade,  cada linha que projeta um ponto da figura é perpendicular ao plano de projeção.)</li>
-<li>0: visão da câmara</li>
-<li>.: centra visão no(s) objeto(s) selecionado(s)</li>
-<li>/: centra visão no(s) objeto(s) selecionado(s) em modo Local (restantes objetos são escondidos, não estão visíveis)</li>
-<li>+ e -: Zoom in Out</li>
-
+<li>Ctrl + N (novo projeto), Ctrl + S (gravar), Ctrl + W (fechar projeto), Ctrl + Q (fechar aplicação)</li> 
+<li>Ctrl + X (cortar), Ctrl + C (copiar) e Ctrl + V (colar)</li>
+<li>Ctrl + Z (undo) e Ctrl + Y (redo)</li>
+<li>Delete (apagar)</li>
+<li>Alt + R (modo de rotação no objeto selecionado) e Shift + Botão esquerdo do rato (redimensionamento proporcional do objeto selecionado)</li>
+<li>Setas (desloca o objeto selecionado com incrementos fixos), Shift + Setas (desloca mais lentamente, incrementos menores), Ctrl + Setas (desloca mais rapidamente, incrementos maiores)</li>
+<li>Desenho: P (lápis), K (tinta), S (PoliLinha), L (Linha), R (rectânculo), C (elipse) </li>
+<li>Seleção: N (seleção de nós) e O (seleção de objeto)</li>
+<li>Preenchimento: I (preenchimento interno) e B (preenchimento de linha)</li>
+<li>Zoom: Z (zoom in) e Shift + Z (zoom out)</li>
+<li>Tweening: Shift + W (tween de posição), Shift + R (tween de rotação), Shift + S (tween de escala), Shift + H (tween de distorção vertical/horizoantal), Shift + O (tween de opacidade), Shift + C (tween de cor).</li>
+<li>F5 (cria nova layer), F6 (remove layer ativa/selecionada)</li>
+<li>F8 (move frame para baixo), F9 (move frame para cima)</li>
+<li>F10 (tranca frame)</li>
+<li>Ctrl + 1 (módulo de animação), Ctrl + 2 (módulo de reprodução)</li>
+<li>Ctrl + G (agrupar seleção), Ctrl + Shift + G (desagrupar seleção)</li>
+<li>Ctrl + A (selecionar tudo)</li>
+<li>Page Up (avança para frame anterior), Page Down (avança para frame seguinte)</li>
+<li>Ctrl + Page Down (copia frame atual para frame seguinte)</li>
 </ul>
-
- 			 <img src="img/introducao/blender/interface/numpad.png" alt="..." class="img-responsive img-thumbnail center-block">     
- 			 
- <p>A tecla Home coloca a visão da 3D Views de forma a incluir todos os objetos existentes na cena.</p>
- 
-<h3>O rato</h3>
-<p>
-O rato com 3 botões é uma ferramentas de enorme utilidade para trabalhar com o Blender. É possível trabalhar com um rato sem 3º botão (a roda) mas é mais trabalhoso.
-</p>
-<p>
-O Botão Esquerdo do Rato (BER) serve sobretudo para 2 fins: posicionar o 3D Cursor (o “alvo”), elemento que determina o local onde vão surgir os novos objetos adicionados e que também pode ser extremamente útil para diversas operações (i.e. eixo de rotação, etc.); confirmar operações (equivale ao ENTER). Por exemplo, se estiver a rodar um objeto, este só conclui a operação quando clicar no BER ou no ENTER. Se clicar no Botão Direito do Rato (BDR) antes de clicar no BER, a operação é cancelada.
-</p>
-<p>
-O BDR serve para selecionar (objetos, vértices, etc.).
-</p>
-<p>
-O terceiro botão, o Botão do Meio do Rato (BMR) serve para aproximar/afastar a visão (se rodar) e para manipular livremente a perspetiva (se clicar).
-</p>
-
-
-
-<h3>Adicionar objetos</h3>
-<p>
-O atalho para adicionar novos objetos na janela de 3D View é o SHIFT+A. O cursor do rato tem de estar na janela 3D View para o menu Add surgir.
-</p>
-<p>
-É através deste menu que pode adicionar mesh (malhas), curvas, texto, bones (ossos), lattices (grades), câmaras, lâmpadas, etc.
-</p>
- 			 <img src="img/introducao/blender/interface/addobjects.png" alt="..." class="img-responsive img-thumbnail center-block">     
-
-<p>Para apagar pode utilizar Del ou X.</p>
-
-
-<h3>Selecionar</h3>
-
-<p>
-A forma mais simples de selecionar um objeto ou um vértice é clicando nele com botão direito do rato (BDR). Para selecionar os vértices ou as faces de um objeto, terá primeiro de selecionar o objeto e ativar o modo de edição (por exemplo, utilizando a tecla TAB).
-</p>
-<p>
-Pode utilizar a tecla A para selecionar ou retirar a seleção de tudo. Ou seja, se estiver em modo de objeto e clicar na tecla A seleciona todos os objetos existentes. Se estiver  em modo de edição, seleciona todos os vértices, arestas ou faces que constituem o objeto.
-</p>
-<p>
-A tecla B serve para ativar a seleção por caixa (Box) e a tecla C serve para ativar a seleção por círculo (Circle). Neste último caso, pode utilizar a roda do rato para reduzir ou aumentar o círculo de seleção. Para selecionar  objetos, vértices, arestas ou faces que não sejam adjacentes (e portanto, não pode utilizar a seleção por caixa...) utilize o Shift e clique com o BDR.
-</p>
-<p>
-Para utilizar a seleção por laço, clique no Ctrl e no botão esquerdo do rato (BER). Sem largar o BER, desenhe o laço, selecionado todos os objetos (em Objet Mode) ou vértices/arestas/faces (Edit Mode) que ficarem
- inseridos no mesmo.
-</p>
-<p>
-Em Edit Mode pode ainda utilizar outras ferramentas de seleção:</p>
-<ul>
-<li>Ctrl + NUMPAD+ = aumenta/expande gradualmente a seleção</li> 
-<li>Ctrl + NUMPAD– = diminui/reduz gradualmente a seleção</li> 
-<li>Alt +  BDR (em GNU/Linux é Shift + Alt + BDR) = seleciona Edge Loops</li>
-<li>Ctrl + Alt + BDR = seleciona Edge Rings</li>
-</ul>
-
-
-<h3>Modos OBJECT e EDIT</h3>
-<p>
-Geralmente, a maior parte das tarefas é realizada em dois modos de trabalho principais: modo objeto (Object Mode) e modo edição (Edit Mode). O modo Object permite trabalhar com os objetos 3D como um todo (por exemplo, mover um cubo, rodar uma pirâmide, etc.), o modo Edição é utilizado para manipular os vértices, arestas ou faces de uma malha.
-</p>
-<p>	
-Quando inicia a aplicação, esta encontra-se em modo objeto. Utilize a tecla TAB para alternar entre estes dois modos. No modo Object, os objetos selecionados são identificados por uma linha laranja. No modo Edição,  os vértices ou arestas selecionados estão a laranja.
-</p>
-<p>
-No modo Edição, surgem no Header da janela 3D View duas opções bastante úteis: os primeiros 3 botões permitem escolher se pretende selecionar vértices, arestas ou faces; o último botão permite limitar a seleção ao que está visível (se este botão não estiver ativado e selecionar com uma caixa, tudo o que estiver dentro da caixa – por exemplo, a parte da frente e de trás de um objeto – vai ser selecionado).
-</p>
- 			 <img src="img/introducao/blender/interface/28.png" alt="..." class="img-responsive img-thumbnail center-block">     
-
-
-<h3>Mover, rodar e redimensionar <small>(Grab, Rotate e Scale)</small></h3>
-<p>
-As teclas G, R e S servem para aGarrar (para deslocar no espaço), Rodar e eScalar (alterar a dimensão) do que estiver selecionado. Ou seja, se estiver em modo objeto, aplica as modificações ao objeto como um todo. Se estiver em modo edição, aplica as modificações aos vértices, arestas ou faces selecionados.
-</p>
-<p>
-Em vez destas teclas, pode utilizar os manipuladores para os mesmos fins.
-</p>
- 			 <img src="img/introducao/blender/interface/26.png" alt="..." class="img-responsive img-thumbnail center-block">	
-<p>
-Se desejar, pode bloquear as operações aos eixos X, Y e Z e introduzir valores numéricos exatos. Por exemplo, se clicar na sequência de teclas G, Z, 2, o objeto irá deslocar-se no eixo Z em 2 unidades. Se clicar em R, Z, 45, o objeto irá rodar 45º sobre o eixo Z.
-</p>
-<p>
-Se pretende maior controlo nas operações mas não pretende introduzir valores numéricos, pode utilizar as teclas Ctrl, Ctrl+Shift e Shift para obter maior precisão.
-</p>
-<p>
-Também pode introduzir os valores numéricos desejados diretamente na barra de propriedades do 3D View (tecla de atalho é N).
-</p>
-
-
-<h3>Pivot Point</h3>
-<p>Quando vai criar uma rotação (R), esta dá-se em torno de um ponto e num eixo. O eixo é escolhido de acordo com a visão em que 
-estivermos (também podemos escolher o eixo clicando no X, Y ou Z depois de ter clicado no R). O ponto para efectuar qualquer rotação pode ser escolhido através do menu Pivot.</p>
-<p>a. Active Object: se tiver vários objectos/vértices seleccionados, utiliza o centro do último objecto seleccionado.</p>
-<p>b. Individual Centers: todos os objectos/vértices seleccionados rodam em torno do seu centro.</p>
-<p>c. 3D Cursor: objectos/vértices seleccionados rodam em torno do cursor 3D.</p>
-<p>d. Median Point: objectos/vértices seleccionados rodam em torno de um ponto médio entre si.</p>
-<p>e. Bounding Box Center: rotação em torno de um eixo imaginário que passa pelo centro de uma caixa imaginária que envolve os objectos seleccionados.</p>
-
-
-
-
-<h3>Unir e separar</h3>
-<p>
-Em modo Object, selecione os objetos que pretende unir (Join) e prima Ctrl+J.	Em modo Edit, para separar (Partir) malha, para criar 2 objetos a partir de 1, selecione os vértices, arestas ou faces que pretende separar e selecione P, escolha a opção Selection.
-</p>
-<p>
-Em modo Edit, para criar mais vértices, arestas ou faces, selecione o que pretende dividir e prima W (Subdivide) ou utilize a faca (Knife) para riscar a linha de corte com a tecla K. Para unir, selecione o que pretende unir e prima W, opção Merge.
-</p>
-
-
-<h3>Origem ou centro dos objetos</h3>
-
-<p>
-Todos os objetos inseridos no Blender possuem uma origem (Origin). Em versões anteriores, a Origin era designada por Centro. No momento em que adicionamos um objeto, o ponto mediano entre os vértices que constituem o objeto torna-se na Origin do novo objeto. A Origin está representada por um ponto laranja no meio do objeto.
-</p>
- 			 <img src="img/introducao/blender/interface/17.png" alt="..." class="img-responsive img-thumbnail center-block">	
-<p>
-Se estiver em Edit Mode e mover todos os vértices de um objeto, a Origin não vai ser alterada e vai permanecer no mesmo local.
-</p>
-<p>
-A Origin de um objeto pode ser manipulada através do menu Set Origin na barra de ferramentas. 
-As opções são claras: na primeira opção, os vértices do objeto vão deslocar-se até à Origin; 
-na segunda, a Origin vai ser deslocada para o centro do objeto (calcula o centro com base na geometria); 
-na terceira, a Origin vai para onde estiver o 3D Cursor; 
-na última, move a Origin para o centro calculado da massa do objeto.
-</p>
- 			 <img src="img/introducao/blender/interface/16.png" alt="..." class="img-responsive img-thumbnail center-block">	
-	
-<p>
-Uma correta compreensão e manipulação da Origin, juntamente com as opções de Snap
- e Align Objects (ver ponto seguinte), permite um total controlo dos alinhamentos entre os objetos.
-</p>
-<p>
-No entanto, como irá ver em diversos textos, o papel da Origin é muito mais importante em muitos outros contextos, sendo absolutamente essencial compreender como manipulá-la.
-</p>	
-
-	
-<h3>Alinhamentos e Snap</h3>
-
-<p>
-Existem diversas formas de trabalhar os alinhamentos entre objetos ou na malha. Para começar, a barra de propriedades (ver ponto seguinte) indica os valores X, Y e Z de cada objeto 
-ou seleção e é possível introduzir os valores exatos pretendidos. Por outro lado, quando aplica operações de translação (G), rotação (R) e escala (S),
- pode utilizar as teclas Ctrl, Ctrl+Shift e Shift para obter maior precisão.
-</p>
-<p>A ferramenta de Snap é de extrema utilidade para colocar objetos num ponto exato ou com maior precisão.</p>
-
-<p>Existem dois tipos de Snap. Pode utilizar o menu de Snap (atalho é Shift+S) para colocar a seleção ou o cursor 3D num ponto exato. Esta ferramenta pode ser utilizada em Edit e Object Mode.</p>
-
-<img src="img/introducao/blender/interface/14.png" alt="..." class="img-responsive img-thumbnail center-block">	
- 
-
-<p>Pode utilizar o Snap During Transform (ver no início deste texto o nº 18) para ativar opções de Snap durante as opções de translação (G), rotação (R) e escala (S). Nesta 
-ferramente, pode ainda selecionar qual o elemento que pretende utilizar para o Snap (grelha, vértices, faces, etc.). Esta ferramenta pode ser utilizada em Edit e Object Mode.</p>
- 			 
-
 
 
 
@@ -331,212 +162,93 @@ ferramente, pode ainda selecionar qual o elemento que pretende utilizar para o S
 				<h2>Gestão e organização</h2>
                 
       </div>
+<h3>Cenas (Scenes), Quadros (Frames) e Camadas (Layers)</h3>
+
+<p>Um projeto Tupi pode ter várias cenas. No mínimo, cada projeto tem 1 cena.</p>
+
+<p>Uma cena pode ter várias frames (quadros). No mínimo, cada cena tem 1 frame.</p>
+
+<p>Uma frame (quadro) pode ter várias camadas (layers). No mínimo, cada frame tem 1 camada (layer).</p>
+
+
+<h3>Biblioteca</h3>
+
+
+<p>A Biblioteca permite organizar listas e pastas com recursos. Estes podem ser internos/nativos (criados 
+dentro do Tupi) ou foram importados.</p>
+
+
+<h3>Importar Paletas</h3>
+
+<p>O Tupi permite importar paletas do GIMP (menu de topo Importar). Pode utilizar o GIMP para gerar paletas a partir de imagens já existentes ou criar os seus próprios ficheiros. </p>
+
+<p>As paletas do GIMP são ficheiros de texto com extensão .gpl organizados de forma simples. Têm o nome da paleta no topo e as cores (valores RGB e nome da cor)</p>
+
+
+<h4>Conteúdo da paleta do GIMP Default.gpl</h4>
+
+<blockquote>
+  <p>GIMP Palette</p>
+  <p>Name: Default</p>
+  <p>#</p>
+  <p>255   0   0	Red</p>
+  <p>255   0 255	Magenta</p>
+  <p>  0   0 255	Blue</p>
+  <p>  0 255 255	Cyan</p>
+  <p>  0 255   0	Green</p>
+  <p>255 255   0	Yellow</p>
+  <p>127   0   0	Dark Red</p>
+  <p>127   0 127	Dark Magenta<
+  <p>  0   0 127	Dark Blue</p>
+  <p>  0 127 127	Dark Cyan</p>
+  <p>  0 127   0	Dark Green</p>
+  <p>130 127   0	Dark Yellow</p>
+  <p>  0   0   0	Black</p>
+  <p> 25  25  25	Gray 10%</p>
+  <p> 51  51  51	Gray 20%</p>
+  <p> 76  76  76	Gray 30%</p>
+  <p>102 102 102	Gray 40%</p>
+  <p>127 127 127	Gray 50%</p>
+  <p>153 153 153	Gray 60%</p>
+  <p>178 178 178	Gray 70%</p>
+  <p>204 204 204	Gray 80%</p>
+  <p>229 229 229	Gray 90%</p>
+  <p>255 255 255	White  </p>
+  
+</blockquote>
 
 
 
-<h3>Camadas (Layers) e Cenas (Scenes)</h3>
+<h3>Edição externa com outro software de imagem</h3>
 
-<p>
-Uma das formas simples de organizar o trabalho é utilizar o sistema principal de layers (camadas) do Blender. Em Object Mode, se atentar no Header da janela de 3D, é facilmente identificável um conjunto de 20 quadrados ou caixas que permite aceder às layers existentes. Por pré-definição, os números existentes no topo do teclado também permitem aceder às diversas layers. Por exemplo, se clicar no número 5, a sua janela de 3D irá mostrar o conteúdo da layer 5.
-</p>
-<p>
-Para mover objeto(s) entre layers, selecione o(s) objeto(s) que pretende mover, clique em M e selecione a layer de destino. Para ativar ou tornar visíveis várias layers, clique nos quadrados/caixas enquanto pressiona o Shift.
-</p>
- 			 <img src="img/introducao/blender/interface/12.png" alt="..." class="img-responsive img-thumbnail center-block">	 			 
-<p>
-Dividir o trabalho entre as Scene layers permite uma melhor organização visual e facilita a gestão do esforço do computador.
-</p>
-<p>
-O Blender tem ainda subsistemas específicos de layers (i.e. Render Layers e Armature Layers) mas, dada a especificidade do seu uso e utilidade, não iremos  abordar essas funcionalidades neste momento.
-</p>
-<p>
-Se cada Scene tem um conjunto de layers, também um ficheiro de Blender pode ter várias Scenes. Uma Scene inclui todos os objetos e configurações. Na realidade, sempre que inicia a aplicação o Blender carrega uma Scene com o nome “Scene” que tem um cubo, uma câmara e uma lâmpada no primeiro layer.
-</p>
-<p>
-No topo da interface existe um botão que permite aceder a uma lista de Scenes existentes (e navegar entre as mesmas) e dois botões para criar e apagar Scenes.
-</p>
-<p>
-Para renomear as Scenes, basta clicar na caixa de texto e digitar o novo nome.
-</p>
-<p>
-Quando cria uma nova Scene, existem algumas possibilidades que deve ter em conta:</p>
-
-<ul>
-<li>Empty: cria um nova Scene vazia.</li>
-<li>Link Objects: cria uma nova Scene exatamente igual e com o conteúdo linkado. Ou seja, todas as alterações que fizer nos objetos de uma Scene também ocorrem na outra. [Se introduzir um novo objeto, como este não está linkado, esta relação não existe.]</li>
-<li>Link Objects Data: É semelhante à opção anterior mas nem todas as propriedades estão linkadas. Por exemplo, o material e a geometria dos objetos estão linkados mas  a localização, rotação e escala são independentes.</li>
-<li>Full Copy: cria uma nova Scene exatamente igual, com o mesmo conteúdo da atual, mas independentes.</li>
-</ul>
-	
-	 			 <img src="img/introducao/blender/interface/11.png" alt="..." class="img-responsive img-thumbnail center-block">	 			 
-	 			  			 <img src="img/introducao/blender/interface/10.png" alt="..." class="img-responsive img-thumbnail center-block">	 			 
-	 			  			 
-<p>	 			  			 
-Se quiser Linkar um objeto a outra cena, selecione o objeto e prima Ctrl+ L, selecionando depois a Scene a que pretende linkar o objeto.
-</p>
-	
-<h3>Append e Link</h3>
-<p>
-Para importar conteúdo de outros ficheiros .blend são utilizadas as opções Append e Link. O Append permite importar conteúdos (i.e. materiais, objetos, malha, câmara, Scene completa, armadura, etc.) de um ficheiro .blend para outro. Ou seja, equivale a importar algo de um ficheiro .blend para outro. O conteúdo importado constitui uma cópia independente do seu original.
-</p>
-<p>
-	Com o Link, o conteúdo importado permanece linkado ao original. Ou seja, se proceder a alterações no ficheiro original (i.e. alterar a forma do objeto, modificar materiais, etc.), essas alterações também serão visíveis no ficheiro para onde fez Link.
-</p>
-	 			 <img src="img/introducao/blender/interface/9.png" alt="..." class="img-responsive img-thumbnail center-block">	 			 
-
-
-<h3>Importar e Exportar</h3>
-<p>
-No Blender, as opções de Import e Export  servem para importar e exportar ficheiros em formatos diferentes do nativo .blend. Ou seja, servem para importar/exportar ficheiros em formato 3ds (3D Studio), dae (COLLADA) ou obj (Wavefront), para citar apenas alguns exemplos.
-</p>
-
-<h3>External Data</h3>
-<p>
-	As opções de External Data são extremamente úteis para (des)empacotar no ficheiro .blend todos os ficheiros externos que possa estar a utilizar. Por exemplo, se adicionar uma imagem como textura, esta constitui um ficheiro externo. Ou seja, se alterar a localização (o caminho para) da imagem ou do ficheiro, se alterar o nome da imagem, etc., a ligação entre o ficheiro .blend e a imagem é quebrada. Se empacotar (Pack into .blend file), todos os ficheiro externos são armazenados dentro do próprio ficheiro .blend e este passa a ser autónomo, não necessitando dos ficheiros externos. Contudo, ao empacotar um ficheiro .blend, este vê a sua dimensão aumentar.
-</p>
-<p>	
-	Sugestão: utilize ficheiros “packed” para transporte ou distribuição mas desempacote sempre antes de iniciar o seu trabalho.
-</p>
-
-
-
-<h3>Gravar ficheiros com incremento no nome</h3>
-
-<p>Já deve ter utilizado várias vezes os atalhos do Blender para gravar. O que talvez não saiba é que existe uma forma fácil e rápida de criar diversas versões dos seus ficheiros.</p>
-
-<p>Gravar diversas versões, à medida que vai avançando, é altamente recomendável para evitar perder trabalho caso aconteça algum problema.</p>
-
-<p>Grave o seu ficheiro escolhendo livremente o nome mas termine com um número. Para a primeira versão, sugere-se que utilize o 1. Ou seja, em vez de gravar um ficheiro com o nome “nave.blend”, grave com o nome “nave1.blend” ou “nave_1.blend”.</p>
-
-<p>Depois, quando quiser voltar a gravar, faça Gravar Como... e, com a janela onde escolhe o nome do ficheiro aberta, pressione a tecla +. O nome do ficheiro vai alterar-se para “nave2.blend” ou “nave_2.blend” e basta clicar em Enter para gravar o ficheiro com o novo nome.</p>
-
-<p>Depois de gravar a primeira versão com um número no final do nome, pode gravar rapidamente novas versões com a seguinte sequência de  teclas:</p>
-
-<p>1. SHIFT+CTRL+S</p>
-
-<p>2. +</p>
-
-<p>3. ENTER</p>
-
+<p>Quando seleciona um objeto na Biblioteca, através do botão direito do rato pode enviar o mesmo 
+para edição externa no GIMP, Krita ou MyPaint.</p>
+<p>Depois de editar, basta gravar e fechar a aplicação que o objeto é atualizado dentro do Tupi.</p>
 
 </div>
 
-   	     <div class="row">					
-       <div class="locaisdasancoras"  id="configuracoes"><br><br></div> 								
-      <div class="page-header" id="online">
-        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
-				<h2>Configurações</h2>
-                
-      </div>
-
-<p>
-No topo da aplicação surge uma janela do tipo Info. O primeiro menu File permite aceder às janelas e painéis de preferências do utilizador (User Preferences). Nestas janelas pode configurar diversos aspetos e instalar Add-Ons que expandem as funcionalidades originais da aplicação.
-</p>
-<p>
-Ainda no mesmo menu (File), existe a opção Load Factory Settings que permite restaurar todas as configurações originais do Blender.
-</p>
-
-<h3>Preferências do utilizador</h3>
-
-<p>
-O Blender é uma ferramenta bastante versátil que permite bastante liberdade de configuração. Para aceder às configurações, utilize o menu File.
-</p>	
-	 			 <img src="img/introducao/blender/interface/8.png" alt="..." class="img-responsive img-thumbnail center-block">       
-
-<p>
-Sempre que encerra a aplicação Blender, é gravado automaticamente um ficheiro temporário com o nome quit.blend. Para abrir este ficheiro, reabrindo o ficheiro que encerrou pela última vez, utilize a opção Recover Last Session. Tenha em atenção que este ficheiro é gravado numa pasta temporária (localização varia de acordo com o Sistema Operativo) e desaparece caso reinicie o Sistema Operativo. Por outro lado, caso encerre a aplicação por mais do que uma vez, apenas a última sessão será gravada.
-</p>
-<p>
-A opção Recover Auto Save permite abrir um dos ficheiros de backup automático do Blender, facilmente reconhecidos pela extensão blend1, blend2, etc.
-</p>
-<p>
-A opção Load Factory Settings permite repor as configurações originais, como se estivesse a abrir o Blender pela primeira vez.
-</p>
-<p>
-Quando inicia o Blender com as configurações originais, é apresentado um cubo, uma lâmpada e uma câmara, entre outras opções. Na realidade, o Blender carrega por pré-definição um ficheiro .blend com essas opções e configurações. A opção Save Startup File permite guardar alterações a essas pré-definições, permite guardar um ficheiro personalizado de arranque.
-</p>
-<p>
-É através da opção User Preferences que acedemos à janela com as principais opções de configuração da aplicação.
-</p>
-
-<h4>Abas das preferências do utilizador</h4>
-<p>
-Como o próprio nome indica, a aba de Interface permite configurar diversos aspetos relativos à Interface do Blender (dimensão da grelha, dimensão dos manipuladores, etc.). Destacamos a opção Rotate Around Selection caso pretenda que a vista rode em torno dos elementos selecionados.
-</p>
- 			 <img src="img/introducao/blender/interface/Screenshot-4.png" alt="..." class="img-responsive img-thumbnail center-block">       
-<p>
-A aba Editing permite configurar aspetos relacionados com operações de trabalho. Por exemplo, permite definir que dados são duplicados sempre que duplicar um objeto.
-</p>
-
- 			 <img src="img/introducao/blender/interface/Screenshot-5.png" alt="..." class="img-responsive img-thumbnail center-block">       
-
-<p>
-A aba de Input permite configurar opções relacionadas com o uso do rato e teclado. A opção Emulate Numpad atribui à linha de números (por pré-definição controlam as layers) as funções pré-definidas para o Numpad (opções de visualização). 
-</p>
-
- 			 <img src="img/introducao/blender/interface/Screenshot-6.png" alt="..." class="img-responsive img-thumbnail center-block">       
- 
-<p>A aba Addons permite ativar e (des)instalar Addons.</p> 
- 			 <img src="img/introducao/blender/interface/Screenshot-7.png" alt="..." class="img-responsive img-thumbnail center-block">       
- 
- 
-<p>
-A aba Themes permite configurar a aparência das várias janelas e botões existentes.
-</p> 
- 			 <img src="img/introducao/blender/interface/Screenshot-8.png" alt="..." class="img-responsive img-thumbnail center-block">       
-
-<p>
-A aba File permite configurar diversos aspetos importantes. Por exemplo, permite configurar a quantidade de ficheiros de backup (autosave) criados e o tempo de intervalo entre esses autosaves. É ainda nesta janela que se podem pré-definir pastas   específicas e aplicações associadas (Image Editor e Animation Player).
-</p> 			 
- 			 <img src="img/introducao/blender/interface/Screenshot-9.png" alt="..." class="img-responsive img-thumbnail center-block">       
-
-<p>A aba System permite configurar opções gerais da aplicação. Destacamos a quantidade de memória RAM atribuída ao editor de vídeo, o número de FPS para screencasts e 
-a ativação de renderização por GPU (se estiver disponível).</p>
- 			 <img src="img/introducao/blender/interface/Screenshot-10.png" alt="..." class="img-responsive img-thumbnail center-block">        			  			  			  			  			 
-
-
-<h3>Restauro da configuração original</h3>
-
-     <div class="row">
-			   	<div class="col-xs-6 col-xs-offset-3">
-			<div class="well embed-responsive embed-responsive-16by9">
-			<iframe width="640" height="360" src="http://www.youtube.com/embed/2s1hMYKdFZs" frameborder="0" allowfullscreen></iframe>
-			</div>	   	
-			   	</div>
-			   	</div>
-
-</div>
 
 
    	     <div class="row">					
        <div class="locaisdasancoras"  id="sugestoes"><br><br></div> 								
       <div class="page-header" id="online">
         <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
-				<h2>Algumas sugestões relativas à interface e interação</h2>
+				<h2>Alterar interface</h2>
                 
       </div>
 
-<h3>Interface</h3>
-<p>Nas User Preferences, ative...
+<p>O sistema de temas do Tupi ainda não está implementado mas é possível fazer algumas alterações.</p>
 
-<ul>
-<li>Region Overlap (aba System)</li>
-</ul>
+<h3>Posição das janelas</h3>
+<p>As janelas e barras podem ser deslocadas (duplo clique para janela ficar flutuante ou clique e arraste a barra) e ancoradas  noutras posições.
 
+<h3>Ícones</h3>
+<p>
+Os ícones do Tupi estão armazenados numa pasta (theme/default/icons) que pode ser acedida facilmente. A imagem abaixo mostra um exemplo da interface com os ícones do Inkscape/Tango.
 </p>
 
-
-
-<h3>Interação</h3>
-<p>Nas User Preferences, ative...
-
-<ul>
-<li>Rotate Around Selection (na aba Interface)</li>
-</ul>
-
-</p>
-
-
+ 			 <img src="img/interface/tupi/tupi_interface2.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+	
 </div>
 
 
@@ -545,48 +257,6 @@ a ativação de renderização por GPU (se estiver disponível).</p>
 
 
 
-
-   	     <div class="row">					
-       <div class="locaisdasancoras"  id="screencast"><br><br></div> 								
-      <div class="page-header" id="online">
-        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
-				<h2>Captura de ecrã: screencast e screenshot</h2>
-                
-      </div>
-
-
-<p>O Blender integra ferramentas próprias para captura de ecrã que dispensam a utilização de outras aplicações adicionais. 
-As ferramentas estão disponíveis no menu Window e através dos atalhos Ctrl+F3 (captura estática de ecrã = screenshot) e Alt+F3 (captura animada de 
-ecrã = screencast).
-</p>
-
- 			 <img src="img/introducao/blender/interface/screencast1.jpg" alt="..." class="img-responsive img-thumbnail center-block">       
-
-
-
-<h3>Screenshot</h3>
-<p>Pode ativar a captura estática de ecrã (screenshot) através do menu Window ou por atalho (Ctrl+F3). Depois de ativar, surge uma janela para decidir onde gravar 
-a imagem, escolher o formato, etc. A grande vantagem de utilizar este sistema (em vez do sistema de captura habitualmente existente no Sistema Operativo) é que o screenshot só captura 
-o ecrã do Blender e não inclui outras janelas do Sistema Operativo.
-
-</p>
-
-
-<h3>Screencast</h3>
-<p>Pode ativar a gravação vídeo do ecrã para criar um screencast através do menu Window ou por atalho (Alt+F3). 
-O screencast funciona como um render do seu ecrã. As opções de Output da renderização (tipo de ficheiro e pasta) são utilizadas também no screencast. Ou seja, por pré-definição, o screencast 
-cria uma sequência de PNGs na pasta /tmp.
-
-</p>
-<p>Depois de iniciar a captura, a gravação permanece ativa até clicar no botão de cancelamento Capture.</p>
-
- 			 <img src="img/introducao/blender/interface/screencast2.jpg" alt="..." class="img-responsive img-thumbnail center-block">       
-
-</div>
-
-
-<p>Na aba System das preferências do utilizador (User Preferences) pode configurar o número de FPS e o tempo de intervalo entre captura de cada frame.</p>
- 			 <img src="img/introducao/blender/interface/Screenshot-10.png" alt="..." class="img-responsive img-thumbnail center-block">        			  			  			  			  			 
 
 
 
