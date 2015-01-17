@@ -56,9 +56,18 @@ footer {
 	}
 
 
+.navbar {
+	-webkit-border-radius: 0em;
+	-moz-border-radius: 0em;
+	border-radius: 0em;
+}
+
 .navbar-inverse {
-	border-radius: 0px;
+	border-color: #39ae60;
 	background-color: #39ae60;
+	-webkit-border-radius: 0em;
+	-moz-border-radius: 0em;
+	border-radius: 0em;
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,22,0,0.75);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0,22,0,0.75);
 	box-shadow: 0px 2px 5px 0px rgba(0,22,0,0.75);
