@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Manual Livre de Animação 2D" /> 
+<meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
+<meta name="author" content="nafergo" >
+<meta charset="UTF-8">
+<title>Manual Livre de Animação em 2D</title>   
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/mine.css" media="all" />	
+
+</head>
+
+
+<body>
+<div id="topo"></div>
+
+<!-- início do menu -->
+
+	<div data-include="menu.html"></div>
+
+<!-- fim do menu -->
+
+
+<div class="container-fluid">
+	<div class="row">
+   	<div class="col-xs-10 col-xs-offset-1">
+			<h1>Tweening de Opacidade <small>no Tupi</small></h1>
+      
+
+      	<div class="page-header">
+				<h2>Introdução</h2>
+      	</div>
+     
+     <p>O tweening de opacidade do Tupi permite gerar frames automaticamente com alterações na opacidade de um objeto.</p>
+ 				<img src="img/animacao/tupi/tweening/1.jpg" alt="..." class="img-responsive img-thumbnail center-block"> 
+ 
+ 			<div class="page-header">
+        		<h2>Exercício</h2>
+	      </div>   	
+   	
+
+<p>Neste exercício vamos utilizar as imagens vetoriais 
+<a href="img/animacao/tupi/tweening/nuclear.svg" download>nuclear</a> e <a href="img/animacao/tupi/tweening/nuclear1.svg" download>nuclear1</a> 
+(adaptadas da imagem disponível em <a href="https://openclipart.org/detail/171620/nuclear-landscape---en-by-piotrsy-171620" target="_blank">OpenClipart</a>).</p>
+
+
+<p>1. Comece por criar uma pasta para o seu projeto e por criar um projeto tupi.</p>
+
+ <p>2. Importe as imagens disponibilizadas para o projeto.</p>
+ 
+ 
+ 				<img src="img/animacao/tupi/tweening/opacity1.jpg" alt="..." class="img-responsive img-thumbnail center-block">  
+
+<p>3. Ative o Static BG Mode e importe a imagem de fundo para o palco. Redimensione de forma a esta ocupar o fundo.</p>
+
+  				<img src="img/animacao/tupi/tweening/opacity2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+ 				
+<p>4. Ative o Frames Mode e importe o barril. Posicione o barril no local indicado pela imagem abaixo. Repare que estamos na frame 1.</p> 				
+ 				<img src="img/animacao/tupi/tweening/opacity3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>5. Ative a ferramenta de Opacity Tween. Introduza um nome para o tween e clique no sinal + para criar o tween. </p>
+
+ 				<img src="img/animacao/tupi/tweening/opacity4.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>6. Selecione o objeto a que vai aplicar o tween. Clique em cima do barril, este deverá ficar com uma moldura tracejada.</p>
+ 				<img src="img/animacao/tupi/tweening/opacity5.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>7. Clique em Set Properties para definir as propriedades do tween.</p>
+
+<p>O tween que vamos criar vai ter 72 frames, começa na 1 e termina na 72.</p>
+<p>A imagem começa com opacidade a 1 e termina com opacidade a 0.</p>
+<p>A alteração da opacidade vai durar 36 frames.</p>
+<p>O tween vai ter a opção Loop with Reverse ativada. Ou seja, na frame 1 o barril é visível, na 36 o barril está totalmente transparente e na 72 volta a estar 
+totalmente visível.</p>
+<p>No final, clique no botão de gravar para gerar as frames.</p>
+ 				<img src="img/animacao/tupi/tweening/opacity6.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>8. O tupi vai gerar as frames da animação....</p>
+ 				<img src="img/animacao/tupi/tweening/opacity7.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Em filme...</p>
+
+     <div class="row">
+			   			<div class="col-xs-6 col-xs-offset-3">
+			   	
+
+<video width="520" controls>
+  <source src="img/animacao/tupi/tweening/opacity.webm" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>
+			   	<p>(Link para ficheiro <a href="img/animacao/tupi/tweening/opacity.webm" download="ovni.webm">aqui</a>)</p>
+			   	</div>
+			   	</div> 
+
+ 				 				 				 				 				 				     			 
+   	</div>
+	</div>
+</div> <!-- /container -->
+
+
+
+<!-- início do footer -->
+
+	<div data-include="footer.html"></div>
+
+<!-- fim do footer -->
+    
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+    	<script src="js/csi.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip();
+            });
+        </script>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+
+    
+  </body>
+</html>

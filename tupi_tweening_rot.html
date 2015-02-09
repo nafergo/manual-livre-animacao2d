@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="Manual Livre de Animação 2D" /> 
+<meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
+<meta name="author" content="nafergo" >
+<meta charset="UTF-8">
+<title>Manual Livre de Animação em 2D</title>   
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/mine.css" media="all" />	
+
+</head>
+
+
+<body>
+<div id="topo"></div>
+
+<!-- início do menu -->
+
+	<div data-include="menu.html"></div>
+
+<!-- fim do menu -->
+
+
+<div class="container-fluid">
+	<div class="row">
+   	<div class="col-xs-10 col-xs-offset-1">
+			<h1>Tweening de Rotação <small>no Tupi</small></h1>
+      
+	
+
+      	<div class="page-header">
+				<h2>Introdução</h2>
+      	</div>
+     
+     <p>O tweening de rotação do Tupi permite gerar frames automaticamente com alterações na rotação de um objeto.</p>
+ 				<img src="img/animacao/tupi/tweening/1.jpg" alt="..." class="img-responsive img-thumbnail center-block"> 
+ 
+ 			<div class="page-header">
+        		<h2>Exercício</h2>
+	      </div>   	
+   	
+
+<p>Neste exercício vamos utilizar as imagens vetoriais 
+<a href="img/animacao/tupi/tweening/carro.svg" download>carro</a> e <a href="img/animacao/tupi/tweening/roda.svg" download>roda</a> 
+(adaptadas da imagem disponível em <a href="https://openclipart.org/detail/173850/race-car-by-karthikeyan-173850" target="_blank">OpenClipart</a>) 
+e <a href="img/animacao/tupi/tweening/cenario.svg" download>cenario</a> 
+(adaptada da imagem disponível em <a href="https://openclipart.org/detail/97435/cartoon-village-by-dcatcherex" target="_blank">OpenClipart</a> como fundo.</p>
+
+
+<p>1. Comece por criar uma pasta para o seu projeto e por criar um projeto tupi.</p>
+
+ <p>2. Importe as imagens disponibilizadas para o projeto.</p>
+ 
+<p>3. Ative o Dynamic BG Mode e importe a imagem de fundo para o palco. Redimensione de forma a esta ocupar o fundo. Neste exercício, vamos manter as pré-definições na Direction e velocidade 
+(Shift Lenght). O carro vai deslocar-se da esquerda para a direita.</p>
+ 				<img src="img/animacao/tupi/tweening/rot1.jpg" alt="..." class="img-responsive img-thumbnail center-block">  
+
+
+<p>4. Ative o Frames Mode e desenhe um retângulo preto na Frame 1. Este retângulo irá servir de estrada.</p> 				
+  				<img src="img/animacao/tupi/tweening/rot2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+ 				
+<p>5. Importe a base do carro e posicione a mesma.</p>
+
+ 				<img src="img/animacao/tupi/tweening/rot3.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>6. Importe a roda duas vezes, redimensione e posicione as mesmas.</p>
+
+ 				<img src="img/animacao/tupi/tweening/rot4.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>7. Ative a ferramenta de Rotation Tween. Introduza um nome para o tween e clique no sinal + para criar o tween. </p>
+ 				<img src="img/animacao/tupi/tweening/rot5.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<p>8. Selecione o objeto a que vai aplicar o tween. Clique em cima da primeira roda, esta deverá ficar com uma moldura tracejada. Clique em Set Properties para definir as propriedades do tween.</p>
+
+ 				<img src="img/animacao/tupi/tweening/rot6.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>9. Vamos criar uma animação de 4 segundos (96 frames), rotação no sentido do relógio porque o carro vai deslocar-se para a direita. </p>
+<p>Depois de definir as propriedades, clique no botão de gravar para a gerar as frames.</p>
+<p>De seguida, clique na seta que está ao lado do botão de gravar para fechar as propriedades da tween criada.</p>
+
+ 				<img src="img/animacao/tupi/tweening/rot7.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+ 				
+ 				<img src="img/animacao/tupi/tweening/rot8.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>10. Crie uma nova tween. Aplique a nova tween na segunda roda mas siga as mesmas propriedades: rotação no sentido do relógio e 96 frames.</p> 				
+ 				<img src="img/animacao/tupi/tweening/rot9.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+ 				
+
+<p>11. As rodas e o fundo já estão animados mas o carro e a estrada desaparecem... na realidade, só existem na frame 1. Podemos resolver isto de duas formas: introduzir o corpo 
+do carro e a estrada como Static BG ou resolver o problema com um truque através de tweening. Vamos utilizar o truque!</p>
+
+<p>Crie um tween de opacidade para a estrada. Este tween tem 96 frames e a opacidade inicial e final são ambas de 1. Ou seja, não vai ser visível nenhuma alteração mas 
+vão ser criadas 96 frames com a estrada...</p>
+ 				<img src="img/animacao/tupi/tweening/rot10.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>12. Repita o truque para o corpo do carro...</p> 				
+ 				<img src="img/animacao/tupi/tweening/rot11.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>13. Agora tem 96 frames com fundo a deslocar-se + duas rodas a rodar + a estrada + o carro </p>
+
+<p>Em filme...</p>
+
+
+
+
+     <div class="row">
+			   			<div class="col-xs-6 col-xs-offset-3">
+			   	
+
+<video width="520" controls>
+  <source src="img/animacao/tupi/tweening/carro.webm" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>
+			   	<p>(Link para ficheiro <a href="img/animacao/tupi/tweening/carro.webm" download="ovni.webm">aqui</a>)</p>
+			   	</div>
+			   	</div> 
+
+
+<p>SUGESTÃO: Edite o fundo dinâmico e aumente o Shift Length para 50. Edite cada uma das tweens de rotação e aumente a velocidade também para 50 :)</p>
+     			 
+   	</div>
+	</div>
+</div> <!-- /container -->
+
+
+
+<!-- início do footer -->
+
+	<div data-include="footer.html"></div>
+
+<!-- fim do footer -->
+    
+    
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+    	<script src="js/csi.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip();
+            });
+        </script>
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+	</script>
+
+
+    
+  </body>
+</html>
