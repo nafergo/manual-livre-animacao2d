@@ -42,21 +42,27 @@
 					
 					<ul class="list-unstyled">
   					<li><a href="#geral">Aspeto geral</a></li>
- 
+  					<li><a href="#layers">Layers</a></li>  					
+  					<li><a href="#zoom">Zoom e mover área de trabalho</a></li>
+  					<li><a href="#imagem">Redimensionar,mover e importar imagens</a></li>  					  					 
+  					<li><a href="#keyframes">Keyframes e animação</a></li>
+  					<li><a href="#camera">Camera Layer</a></li>
+  					<li><a href="#exportacao">Exportação</a></li>
+  					<li><a href="#fundo">Criando um fundo-guia</a></li>  					   					  					 					  					  					   					  					 					  					  					   					  					 					  					  					   					  					 					
 					</ul>				
 					</div>   	
    	
    	
    	     <div class="row">					
        <div class="locaisdasancoras"  id="geral"><br><br></div> 								
-      <div class="page-header" id="online">
+      <div class="page-header" id="">
         <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
 				<h2>Aspeto geral</h2>
                 
       </div>
-     
+      			 <img src="img/interface/pencil2d/pencil2d_interface.png" alt="..." class="img-responsive img-thumbnail center-block">   
 
- 			 <img src="img/interface/pencil2d/pencil2d_interface.png" alt="..." class="img-responsive img-thumbnail center-block">   
+
 
 <dl class="dl-horizontal">
   <dt>1</dt>
@@ -86,15 +92,9 @@
     
 	<dt>9</dt>
   <dd>Opções de visualização (inverter horizontalmente e verticalmente, Onion skin, etc.)</dd>
-    
-
-	<dt>10</dt>
-  <dd></dd>
-    
+   
     
 </dl>
-
-
 
 
 </div>
@@ -103,6 +103,120 @@
 
 
 
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="layers"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Layers <small>(Camadas)</small> </h2>
+                
+      </div>
+     
+<p>A <b>janela para gestão das layers</b> do projeto encontra-se situada à esquerda da linha de tempo (timeline).</p>
+
+<p>Existem <b>4 tipos de layers</b>: Bitmap Layer, Vector Layer, Sound Layer e Camera Layer. Para <b>adicionar/remover layers</b>, utilize os botões com “ + ” or “ - ”.</p>
+
+<img src="img/interface/pencil2d/layers.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+<p>Para <b>renomear uma layer</b>, faça duplo clique na layer que pretende renomear e escreva o novo nome na janela pop-up.</p>
+
+<img src="img/interface/pencil2d/rename_layers.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+<p>No Pencil2D, a hierarquia das layers segue uma lógica inspirada no processo tradicional de animação. Ou seja, a primeira layer adicionada (está no topo da lista) é a que está mais próxima do fundo da 
+composição. A última layer adicionada (no fim da lista) é aquela que surge mais próxima da frente da composição. Pode reorganizar a sobreposição das layers clicando e arrastando as mesmas.</p>
+
+<p>As layers podem ter 3 estados: ativas, inativas e invisíveis. O seu estado é indicado pela cor do círculo que se encontra à esquerda do nome da layer.</p>
+
+
+<dl class="dl-horizontal">
+  <dt>Círculo preto</dt>
+  <dd>Layer ativada significa que pode desenhar. Clique no nome da layer que pretende ativar para esta passar a exibir um círculo preto.</dd>
+
+  <dt>Círculo cinza</dt>
+  <dd>Layer inativa significa que não pode desenhar na mesma. Se tiver elementos desenhados numa layer inativa, estes irão surgir com um aspeto mais descorado/pálido.</dd>
+
+  <dt>Círculo vazio</dt>
+  <dd>Layer fica invisível. Para desativar/ativar esta opção, clique no círculo que se encontra à esquerda do nome da layer.</dd>
+   
+</dl>
+
+<p>Pode controlar todas as layers em simultâneo através do círculo existente acima da lista de layers.</p>
+
+<p>ATENÇÃO: Quando exportar o seu projeto, só será visível o conteúdo das layers ativas (círculo preto) e inativas (círculo cinza). 
+O conteúdo das layer invisíveis (círculo vazio) não será visível.</p>
+ 			 <img src="img/interface/pencil2d/visibilidade_layers.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+</div>
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="zoom"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Zoom e Mover área de trabalho</h2>
+                
+      </div>
+
+
+<p>Pode fazer <b>Zoom In e Out</b> na área de trabalho de três formas:</p>
+
+
+<dl class="dl-horizontal">
+  <dt>Atalho do teclado</dt>
+  <dd>Utilize os atalhos CTRL+UP (seta para cima) e CTRL+DOWN (seta para baixo) para fazer Zoom In e Out respetivament.</dd>
+
+  <dt>Com a Hand Tool</dt>
+  <dd>Selecione/ative a Hand Tool (H), clique no CTRL + Botão Esquerdo de Rato e mova o rato para fazer Zoom In e Out.</dd>
+  
+  <dt>Botão Direito do Rato</dt>
+  <dd>Clique no Botão Direito do Rato e mova o rato para fazer Zoom In e Out.</dd>
+    
+  
+</dl>
+
+
+<p>Para voltar ao Zoom original, faça duplo clique no botão da Hand Tool. Também pode utilizar o menu View e o atalho CTRL+H.</p>
+
+ 			 <img src="img/interface/pencil2d/zoom.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+ 			 
+
+<p>Para <b>deslocar a área de trabalho</b>, selecione/ative a Hand Tool, clique com Botão Esquerdo de Rato e arraste.</p> 			 
+ 			 
+
+<p>Para <b>rodar a área de trabalho</b>, selecione/ative a Hand Tool, clique em ALT+ Botão Esquerdo de Rato e arraste. Também pode utilizar o menu View e as teclas R e Z para rodar.</p>
+
+
+<p>Para <b>voltar à posição original</b>, faça duplo clique no botão da Hand Tool. Também pode utilizar o menu View e o atalho CTRL+H.</p>
+ 			 
+<p>Também pode inverter a área de trabalho na horizontal e vertical. Pode utilizar os botões disponíveis no painel com opções de visualização, as opções do menu View ou 
+os atalhos SHIFT+H e SHIFT+V para inverter  na horizontal e vertical.</p>
+
+</div>
+
+
+
+
+
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="imagem"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Redimensionar, mover e importar imagens</h2>
+                
+      </div>
+
+<p>As ferramentas Select (atalho na tecla V) e Move (atalho na tecla Q) permitem definir uma seleção e mover (ou redimensionar) a mesma.</p>
+
+<p>Utilize a ferramenta Select para desenhar um retângulo em torno do que pretende mover ou redimensionar. Utilize o Move para mover e redmensionar.</p>
+
+<p>Nas Vector Layers, os objetos estão disponíveis para seleção. Não é necessário desenhar um retângulo de seleção. </p>
+
+<p>Para importar imagens numa Bitmap Layer, recomenda-se que desenhe primeiro um retângulo de seleção e só depois utilize a opção File > Import.</p>
+
+
+ 			 <img src="img/interface/pencil2d/mover.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+
+</div>
 
 
 
@@ -110,6 +224,120 @@
 
 
 
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="keyframes"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Keyframes e animação</h2>
+                
+      </div>
+
+<p>No Pencil2D, a criação de animação implica a criação de <b>keyframes</b>. Estas são representadas através de pequenos retângulos na linha de tempo (timeline).</p>
+
+<p>Os retângulos cinzentos representam keyframes vazias.</p>
+<p>Os retângulos coloridos (rosa) representam keyframes com imagem.</p>
+<p>Os retângulos pretos identificam keyframes selecionadas. As keyframes selecionadas podem ser movida: clique na keyframe
+ e arraste a mesma para o local desejado. Pode mover várias keyframes em simultâneo, selecione as várias keyframes através da tecla SHIFT.</p>
+
+<p>Pode adicionar/remover/duplicar keyframes através dos botões localizados por cima da linha de tempo ou através dos atalhos: F6 = duplica keyframe anterior; 
+F7 = nova keyframe; SHIFT+F5 = apaga keyframe.</p>
+
+<img src="img/interface/pencil2d/keyframes.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>No painel com opções de visualização, encontra botões que permitem ativar/desativar as funcionalidades de <b>Onion Skin</b> para as keyframes anterior e seguinte. 
+Pode também ativar/desativar o onion skin através do menu View ou com os atalhos O (keyframe anterior) e ALT+O (keyframe seguinte).</p>
+
+<p>Do lado direito da interface, imediatamente acima da linha de tempo (timeline), encontra um painel com <b>opções de reprodução</b>. Botões da esquerda para direita: 
+saltar até à primeira keyframes, reproduzir animação, saltar até última keyframe, ativar/desativar looping, ativar/desativar som, número de Frames Per Second.</p>
+
+   
+
+</div>
+
+
+
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="camera"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Camera Layer</h2>
+                
+      </div>
+
+<p>A Camera Layer define os limites ou dimensão da exportação. Faça duplo clique no nome da Camera Layer para aceder às opções de resolução.</p>
+ 			 
+ 			 <img src="img/interface/pencil2d/camera.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>É possível introduzir keyframes na Camera Layer para criar diversos efeitos. 
+Por exemplo, imagine que pretende a deslocação da câmara para criar o efeito de um fundo que desliza.</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="exportacao"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Exportação </h2>
+                
+      </div>
+
+<p>Para exportar o projeto, utilize o menu File > Export. É altamente recomendável a utilização da opção Image Sequence que permite exportar todas as frames criadas. 
+Claro está que após a exportação 
+precisará de um editor de vídeo para converter as frames isoladas em ficheiro de vídeo. O Blender é uma ferramenta com todas a funcionalidades necessárias para desempenhar esta tarefa. 
+Recomenda-se que comece por ler o texto <a href="20edicao_video.html">Introdução à Edição de vídeo no Blender</a>.</p>
+
+
+			 <img src="img/interface/pencil2d/exportar.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>Atenção: para exportar o seu projeto, deverá ter uma Camera Layer na sua lista de layers. Utilize a Camera Layer para definir a resolução.</p>
+
+
+
+</div>
+
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="fundo"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Criando um fundo-guia</h2>
+                
+      </div>
+
+<p>Durante a produção da sua animação, pode ser útil ter uma noção global do enquadramento para efeitos de composição dos planos. Como a área de trabalho do Pencil2D é infinita, não existem
+ limites visíveis que possam definir o enquadramento. A solução é simples: criar um fundo personalizado :)</p>
+ 
+ <p>1. Utilize um editor de imagem para criar um fundo com a dimensão/resolução pretendida. A imagem abaixo tem 1280x720 e apresenta as linhas da regra dos terços para ajudar na composição. Utilize esta imagem ou crie uma sua.</p>			 
+
+			 <img src="img/interface/pencil2d/fundo.png" alt="..." class="img-responsive img-thumbnail center-block">
+			 
+<p>2. No Pencil2D, crie uma Bitmap Layer para o fundo. Importe a imagem criada para essa layer.</p>
+
+			 <img src="img/interface/pencil2d/fundo2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>3. Na opção Edit > Preferences, escolha um tipo de background diferente para a sua área de trabalho.</p>
+
+			 <img src="img/interface/pencil2d/fundo1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+<p>4. Configure a Camera Layer para ter a mesma resolução da sua imagem de fundo-guia.</p>
+
+<p>Antes de exportar o seu projeto, não se esqueça de tornar invisível a layer com o fundo-guia!</p>
+
+
+</div>
 
 
 
