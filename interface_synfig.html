@@ -42,7 +42,9 @@
 					
 					<ul class="list-unstyled">
   					<li><a href="#geral">Aspeto geral</a></li>
-
+  					<li><a href="#layers">Camadas</a></li>  		
+  					<li><a href="#keyframes">Keyframes e Waypoints</a></li>			
+  					<li><a href="#atalhos">Alguns atalhos úteis</a></li>
 					</ul>				
 					</div>   	
    	
@@ -56,65 +58,208 @@
       </div>
      
 
- 			 <img src="img/interface/synfig/synfig_interface.png" alt="..." class="img-responsive img-thumbnail center-block">   
+ 			 <img src="img/interface/synfig/synfig_interface.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
 
-<dl class="dl-horizontal">
-  <dt>1</dt>
-  <dd></dd>
+<dl>
+  <dt>1. Barra de ferramentas</dt>
+  <dd>Em cima, botões que permitem criar e manipular objetos. Em baixo, configurações básicas para cor, gradiente e espessura do pincel.  </dd>
 
-  <dt>2</dt>
-  <dd></dd>
+  <dt>2. Palco para desenho e animação</dt>
+  <dd>Em cima, surgem diversos atalhos, incluindo botões para ativar/desativar diversos controladores (posição, nós, espessura de contorno, etc.), visualização/snap da grelha, Onion skin, 
+, renderização e pré-visualização. Em baixo, a janela inclui controles de zoom, reprodução, tipo de interpolação e botão para ligar/desligar modo de animação.</dd>
 
-  <dt>3</dt>
-  <dd></dd>
+  <dt>3. Janela com abas 1</dt>
+  <dd>Quatro abas: navegador de canvas, editor de palete, navegador de tela e informações.</dd>
 
-  <dt>4</dt>
-  <dd></dd>
+  <dt>4. Janela com abas 2</dt>
+  <dd>Duas abas: 1) opções de configuração de cada uma das ferramentas, opções mudam de acordo com ferramenta selecionada; 2) histórico das ações implementadas.</dd>
   
-  <dt>5</dt>
-  <dd></dd>
+  <dt>5. Janelas de camadas</dt>
+  <dd>Onde surgem todos os objetos presentes no palco e as respetivas camadas (que podem ser ferramentas, filtros, etc.)</dd>
 
+  <dt>6. Janela de propriedades</dt>
+  <dd>Onde surgem (e podem ser alteradas) as propriedade dos objetos selecionados. Todos estes parâmetros podem ser animados.</dd>
 
-  <dt>6</dt>
-  <dd></dd>
+  <dt>7. Janela de linha de tempo (timeline)</dt>
+  <dd>A timeline mostra as keyframes/waypoints do objeto selecionado. </dd>
 
-  <dt>7</dt>
-  <dd></dd>
-
-  <dt>8</dt>
-  <dd></dd>
-    
-	<dt>9</dt>
-  <dd></dd>
-    
-
-	<dt>10</dt>
-  <dd></dd>
-    
     
 </dl>
 
-
-
+<p>O menu Edit > Preferences permite configurar diversas opções globais relativas à aplicação: pré-definição de resolução e fps, unidades (pixels, cm, etc.), intervalo de gravação automática, etc.</p>
+<p>Os menus Canvas > Properties e Canvas > Options permitem configurar diversas opções relativas ao documento aberto: resolução, fps, configuração da grelha, etc..</p>
+ 
 
 </div>
 
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="layers"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Camadas</h2>
+                
+      </div>
+
+
+<p>No Synfig, as camadas (layers) funcionam de modo algo diferente de outras aplicações. Geralmente, cada camada representa um único "primitivo" (i.e. contorno de um objeto, preenchimento/região, imagem importada, 
+etc.) e obedece a uma organização hierárquica (a camada por cima está sobreposta à camada em baixo). A criação de Group Layers (pastas onde podem ser agrupadas 
+camadas) é uma ferramenta indispensável dado que é comum ter dezenas ou centenas de camadas num único projeto.</p> 
+
+<p>As camadas podem ainda armazenar outro tipo de informação (distorções, translações, desfoques, etc) que é aplicada ou exerce influência apenas nas
+camadas abaixo. Deste modo, as camadas são também similares aos filtros do Adobe Photoshop ou GIMP (Blur Layer, Spherize Layer, Bevel Layer, etc.).</p>
+
+<p>
+Os diversos parâmetros existentes nas camadas dependem do tipo de camada e podem ser manipulados (e animados!) através da janela de propriedades.
+</p>
+
+
+<p>No exemplo abaixo, as layers Blur e Translate só se aplicam ou só influenciam a layer Circle. As layers Blur, Translate e Circle estão agrupadas numa Group Layer. 
+A layer Rectangle está fora do grupo e colocada acima  (sobreposta).</p>
+
+   	<div class="col-xs-6">
+ 			 <img src="img/interface/synfig/layer_window.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+ 			    
+   	</div>
+   	<div class="col-xs-6">
+<img src="img/interface/synfig/layer_window1.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+ 			    
+   	</div>
+
+   	</div>
+
+
+
+
+
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="keyframes"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Keyframes e Waypoints</h2>
+                
+      </div>
+
+
+<p>De forma simples e rápida:</p>
+
+<p> <strong>keyframe</strong> é uma frame que tem armazenada/gravada toda a informação de todos os parâmetros;</p>
+<p> <strong>waypoint</strong> é a representação gráfica do valor de um parâmetro na timeline.</p>
+
+<p>Podem existir keyframes sem waypoints e um waypoint não implica a existência de uma keyframe. </p>
+<p>O menu de contexto (botão direito do rato) permite aceder às funcionalidades principais.</p>
+
+<p>As keyframes podem ser criadas, eliminadas e editadas através da sua janela própria. Quando inicia um novo projeto, é criada automaticamente uma keyframe na frame 0. Ao criar uma keyframe 
+está a transformar uma frame normal numa frame especial onde todos os parâmetros de todas as layers estão guardados. Uma frame só pode ter uma keyframe...</p>
+ 			 <img src="img/interface/synfig/keyframe_window.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>Os waypoint são símbolos existentes na timeline que representam graficamente a alteração do valor de um parâmetro de uma layer.</p>
+<p>Sempre que alterar um parâmetro de uma layer em modo de animação, é criado um waypoint. Por exemplo, na imagem abaixo, foi alterada a origem (a posição em X e Y) de uma 
+layer nas frames 0, 3, 6, 12 e 18.</p>
+
+<p>O menu de contexto (botão direito do rato) permite aceder às funcionalidades principais: criar, duplicar, eliminar, etc.</p>
+<p>Os waypoints podem ser movidos. Clique com o botão esquerdo do rato e arraste.</p>
+
+
+ 			 <img src="img/interface/synfig/timeline_window.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+<p>Se clicar com o botão direito do rato em cima de um waypoint pode definir o tipo de interpolação para o In (esquerda) e o Out (direita). O In é o comportamento da 
+alteração do parâmetro (animação) antes de chegar ao waypoint. O Out é o comportamento da alteração do parâmetro (animação) depois do waypoint</p>
+
+<dl class="dl-horizontal">
+  <dt>TCB Smooth</dt>
+  <dd>Transição suave entre dois waypoints. A velocidade vai aumentando até começar a diminuir. Imagine uma curva Smooth entre dois pontos.</dd>
+
+  <dt>Linear</dt>
+  <dd>Velocidade da animação é sempre a mesma.</dd>
+
+  <dt>Ease In/Out</dt>
+  <dd>A velocidade aumenta no início e reduz no final, no meio é constante.</dd>
+
+
+  <dt>Constant</dt>
+  <dd>O valor é mantido fixo (constante) até se alterar, não existe um transição suave. Imagine um semáforo a mudar de cor ou uma luz que acende e apaga abruptamente com o interruptor.</dd>
+
+  <dt>Clamped</dt>
+  <dd>Mesmo que TCB Smooth mas nunca ultrapassa os valores definidos no painel dos parâmetros.</dd>
+
+</dl>  
+
+
+ 			 <img src="img/interface/synfig/waypoints.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+<p>Em baixo são apresentadas imagens com o gráfico do Synfig que representa um interpolação Linear, Ease e Constant. A animação é feita entre 2 waypoints: frame 0 e 
+frame 6. Só foi animado um parâmetro (posição em X).</p>
+
+<img src="img/interface/synfig/waypoint_linear.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/interface/synfig/waypoint_ease.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+<img src="img/interface/synfig/waypoint_constant.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+
+
+
+
+     <div class="row">
+			   	<div class="col-xs-6 col-xs-offset-3">
+
+<p>Vídeo com demonstração dos vários tipos de interpolação.</p>
+			<div class="well embed-responsive embed-responsive-16by9">
+			<iframe width="640" height="360" src="http://www.youtube.com/embed/SI1VaH2psts" frameborder="0" allowfullscreen></iframe>
+			</div>	   	
+			   	</div>
+			   	</div>
+			   	
+			   	
+
+   	</div>
+   	
+   	
    	       	     
-   	     
-   	     
+   	   
+
+   	     <div class="row">					
+       <div class="locaisdasancoras"  id="atalhos"><br><br></div> 								
+      <div class="page-header" id="online">
+        <a class="pull-right" href="#topo"><i class="fa fa-chevron-up"></i></a>
+				<h2>Alguns atalhos úteis</h2>
+                
+      </div>
 
 
 
+<dl class="dl-horizontal">
+  <dt>CTRL + A</dt>
+  <dd>Selecionar todos os pontos de controle</dd>
+  <dt>CTRL + -</dt>
+  <dd>Zoom out no palco</dd>
+  <dt>CTRL + =</dt>
+  <dd>Zoom in no palco</dd>
+  <dt>CTRL + _</dt>
+  <dd>Zoom out na timeline (zoom temporal)</dd>
+  <dt>CTRL + +</dt>
+  <dd>Zoom in na timeline (zoom temporal)</dd>
+  <dt>CTRL + ,</dt>
+  <dd>Recua uma frame</dd>
+  <dt>CTRL + .</dt>
+  <dd>Avança uma frame</dd>
+  <dt>CTRL + <</dt>
+  <dd>Recua 1 segundo</dd>
+  <dt>CTRL + ></dt>
+  <dd>Avança 1 segundo</dd>
+
+</dl>
 
 
+<p> <strong>Um dos atalhos mais úteis quando está a trabalhar com Group Layers:</strong> Selecione uma Group Layer, pressione CTRL, clique no ponto verde (origem da Group Player) e 
+arraste a origem do Group para o local desejado :)</p>
 
+<p>Mais atalhos em <a href="http://wiki.synfig.org/wiki/Keyboard_Shortcuts" target="_blank">aqui</a>.</p>
 
-
-
-
-
-
-
+   	</div>
 
    	</div>
 	</div>

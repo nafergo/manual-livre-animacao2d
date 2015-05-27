@@ -35,34 +35,118 @@
 <div class="container-fluid">
 	<div class="row">
    	<div class="col-xs-10 col-xs-offset-1">
-			<h1>Synfig bones</h1>
+			<h1>Importar lista de imagens</h1>
       	
       	<div class="page-header">
-				<h2>Introdução</h2>
+				<h2>Utilidade</h2>
       	</div>
      
+     <p>Uma duas funcionalidades menos conhecidas do Synfig é a capacidade para importar uma sequência de imagens. 
+     Na realidade, o Synfig interpreta um ficheiro de texto com extensão .lst onde surge a informação sobre as FPS e a localização das imagens a importar.</p>
      
+     <p>Esta funcionalidade é sobretudo útil para importar referência de animação/desenho, imagens para desenhar por cima ou para guiar a animação.</p>
  
  
+
  
 			<div class="page-header">
         		<h2>Utilizar</h2>
 	      </div>
+
+<p>No exemplo abaixo iremos utilizar os recursos disponibilizados na <a href="http://wiki.synfig.org/wiki/Doc:Walk_Cycle" target="_blank">wiki do Synfig</a>.</p>
+
+
+<p>Como vamos importar as 4 imagens abaixo, grave as mesmas para uma pasta no seu computador.</p>
+
+   	<div class="col-xs-3">
+  			 <img src="img/desenho/synfig/Frame_01.jpg" alt="..." class="img-responsive img-thumbnail center-block"></div>   
+   	<div class="col-xs-3">
+  			 <img src="img/desenho/synfig/Frame_02.jpg" alt="..." class="img-responsive img-thumbnail center-block"></div>
+   	<div class="col-xs-3">
+  			 <img src="img/desenho/synfig/Frame_03.jpg" alt="..." class="img-responsive img-thumbnail center-block"></div>
+   	<div class="col-xs-3">
+  			 <img src="img/desenho/synfig/Frame_04.jpg" alt="..." class="img-responsive img-thumbnail center-block"></div>
+
+<p>Através de um ficheiro .lst com o conteúdo apresentado em baixo.</p>
+
+<div class="row">
+
+<pre class="col-xs-6 col-xs-offset-3">
+
+FPS 4
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+frame_01.jpg
+frame_02.jpg
+frame_03.jpg
+frame_04.jpg
+
+</pre>
+
+</div>
+<p>Se não quiser criar o seu próprio ficheiro, pode descarregar o exemplo de .lst <a href="img/desenho/synfig/walk.lst">aqui</a>.</p>
+
+
+
+
+
+<p>1. Comece por criar uma nova layer: Layer > New Layer > Other > Import Image</p>
+
+
+  			 <img src="img/desenho/synfig/lst1.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+
+<p>2. No parâmetro Filename, selecione o ficheiro .lst. A layer deverá agora exibir uma sequência de imagens. Estas vão mudando se avançar na timeline :) 
+</p>
+  			   			 <img src="img/desenho/synfig/lst2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+  			 
     
-<p>1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
-<p>2. Crie um Group Layer e insira a region criada.</p>
-<p>3. No Group Layer, crie New Layer > Other > Skeleton</p>
-<p>4. Crie esqueleto: child bones e redimensione influência</p>
-<p>5. Selecione region, selecione todos os pontos (CTRL+A)</p>
-<p>6. Selecione esqueleto: CTRL + Botão Esquerdo do Rato em cima do esqueleto</p>
-<p>7. BDRato em cima do esqueleto > Link to Skeleton</p>
-
-
-
-<p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
-<p>Pode selecionar pontos individualmente e associar a bones específicos.</p>
-<p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
-
    	
    	</div>
 	</div>

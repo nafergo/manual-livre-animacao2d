@@ -35,34 +35,38 @@
 <div class="container-fluid">
 	<div class="row">
    	<div class="col-xs-10 col-xs-offset-1">
-			<h1>Synfig bones</h1>
+				<h1>Criação de loops</h1>
       	
       	<div class="page-header">
 				<h2>Introdução</h2>
       	</div>
      
-     
+     <p>Imagine que pretende repetir uma animação, criar um ciclo que se repete em loop.</p>
  
  
+
  
 			<div class="page-header">
         		<h2>Utilizar</h2>
 	      </div>
+
+
+  			   			 <img src="img/animacao/synfig/quadrado.gif" alt="..." class="img-responsive img-thumbnail center-block">  			 
+
+<p>1. A animação acima foi criada com 3 waypoints: canto inferior direito (frame 0), meio superior (frame 7), canto inferior esquerdo (frame 14). Depois foi adicionada 
+uma layer Time Loop (New Layer > Other > Time Loop).</p>
+
+
+  			 <img src="img/animacao/synfig/timeloop1.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+
+
+<p>2. Nos parâmetros da layer Time Loop, definimos a duração da animação que irá surgir em loop. No exemplo temos 15 frames porque a animação começa na 0 e acaba na 14 (= 15 frames).  
+</p>
+  			   			 <img src="img/animacao/synfig/timeloop2.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+  			 
+  			 
+<p>Foram exportadas 75 frames (5 loops) a 24 frames por segundo.</p>
     
-<p>1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
-<p>2. Crie um Group Layer e insira a region criada.</p>
-<p>3. No Group Layer, crie New Layer > Other > Skeleton</p>
-<p>4. Crie esqueleto: child bones e redimensione influência</p>
-<p>5. Selecione region, selecione todos os pontos (CTRL+A)</p>
-<p>6. Selecione esqueleto: CTRL + Botão Esquerdo do Rato em cima do esqueleto</p>
-<p>7. BDRato em cima do esqueleto > Link to Skeleton</p>
-
-
-
-<p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
-<p>Pode selecionar pontos individualmente e associar a bones específicos.</p>
-<p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
-
    	
    	</div>
 	</div>
