@@ -35,33 +35,39 @@
 <div class="container-fluid">
 	<div class="row">
    	<div class="col-xs-10 col-xs-offset-1">
-			<h1>Armaduras e ossos <small>no Synfig</small></h1>
+			<h1>Deformar imagens raster <small>no Synfig</small></h1>
       	
       	<div class="page-header">
 				<h2>Introdução</h2>
       	</div>
      
+     <p>A Skeleton Deformation Layer permite deformar uma imagem raster através de "bones". 
+     Imagine que tem imagens raster/bitmap (.jpg, .png) criadas noutra aplicação (por exemplo, GIMP) e que 
+     pretende importar e animar as mesmas no Synfig...</p>
      
- In the skeleton layer, each vertex is influenced by a weighted average combination of bones 
+        
+ 
  
  
 			<div class="page-header">
         		<h2>Utilizar</h2>
 	      </div>
     
-<p>1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
-<p>2. Crie um Group Layer e insira a region criada.</p>
-<p>3. No Group Layer, crie New Layer > Other > Skeleton</p>
-<p>4. Crie esqueleto: child bones e redimensione influência</p>
-<p>5. Selecione region, selecione todos os pontos (CTRL+A)</p>
-<p>6. Selecione esqueleto: CTRL + Botão Esquerdo do Rato em cima do esqueleto</p>
-<p>7. BDRato em cima do esqueleto > Link to Skeleton</p>
+<p>1. Importe as imagens</p>
 
 
+<p>2. Adicione uma Skeleton Deformation Layer</p>   
 
-<p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
-<p>Pode selecionar pontos individualmente e associar a bones específicos.</p>
-<p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
+<p>3. Desative a funcionalidade de deformação para poder editar a posição dos "bones"/armadura sem problemas.</p> 
+
+
+<p>4. Configure a armadura</p>
+- Build the skeleton + Create Child Bone + set the influence area for each bone.
+
+<p>5. Reset the Pose e ative a funcionalidade de deformação</p>
+
+<p>6. anime os bones</p>
+
 
    	
    	</div>

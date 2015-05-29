@@ -35,29 +35,37 @@
 <div class="container-fluid">
 	<div class="row">
    	<div class="col-xs-10 col-xs-offset-1">
-			<h1>Armaduras e ossos <small>no Synfig</small></h1>
+			<h1>Sobrepor objetos <small>no Synfig</small></h1>
       	
       	<div class="page-header">
 				<h2>Introdução</h2>
       	</div>
      
-     
- In the skeleton layer, each vertex is influenced by a weighted average combination of bones 
+<p>A hierarquia das layers traduz a proximidade da câmara. Por outras palavras, as layers que estiverem 
+mais próximas do topo estão mais próximas da câmara e, portanto, surgem em cima das layers que estão mais 
+em baixo (mais longe da câmara).</p>    
+
+<p>E se quisermos animar essa proximidade da câmara? Imagine um objeto que vai ficando progressivamente mais longe 
+da câmara (com mais objetos sobrepostos) ou que se vai aproximando (com menos objetos sobrepostos).</p> 
+ 
  
  
 			<div class="page-header">
         		<h2>Utilizar</h2>
 	      </div>
     
-<p>1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
-<p>2. Crie um Group Layer e insira a region criada.</p>
-<p>3. No Group Layer, crie New Layer > Other > Skeleton</p>
-<p>4. Crie esqueleto: child bones e redimensione influência</p>
-<p>5. Selecione region, selecione todos os pontos (CTRL+A)</p>
-<p>6. Selecione esqueleto: CTRL + Botão Esquerdo do Rato em cima do esqueleto</p>
-<p>7. BDRato em cima do esqueleto > Link to Skeleton</p>
+ou'll notice each layer you make has a number in the z depth column in the Layers Panel. Say you have 3 layers, they will be numbered 2 (lowest, e.g. a square) 1 (eg a circle) 0 (highest, the default, e.g. a line). In order to make layer 1, the circle, pass behind layer 2, the square, change its z depth to be 3 or more. The z depth of the circle needs to be greater than 2 in order to be behind the square. To make the square on top of everything, you'd change its z depth to -1 or less.
 
+Positive numbers on the z axis go into the screen, and negative numbers go out of the screen, towards the viewer.
 
+It is possible to animate this effect, but each layer is discrete. They seem to go from 0 to 0.9999.
+
+In addition, objects in grouped layers can only go behind other objects in the same grouped layer. However an grouped layer can go behind another grouped layer.
+Use a boolean parameter to hide a layer ?
+
+You can use set the amount's layer parameter to Constant Interpolation.
+
+Or you can convert the Amount Parameter to a Switch value and give 0 and 1 to the Linked OFF/ON values. 
 
 <p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
 <p>Pode selecionar pontos individualmente e associar a bones específicos.</p>

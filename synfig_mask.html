@@ -35,32 +35,47 @@
 <div class="container-fluid">
 	<div class="row">
    	<div class="col-xs-10 col-xs-offset-1">
-			<h1>Armaduras e ossos <small>no Synfig</small></h1>
+			<h1>Máscaras <small>no Synfig</small></h1>
       	
       	<div class="page-header">
 				<h2>Introdução</h2>
       	</div>
+      	
+      	<p>É comum surgir a necessidade de esconder ou mostrar objetos parcialmente. Imagine personagens 
+      	que ficam tapadas pelo prédio mas visíveis na janela, por exemplo. As máscaras são 
+      	extremamente úteis nestas tarefas. No Synfig, as máscaras são utilizada para esconder ou mostrar...
+      	
+     	
+      	</p>
      
      
- In the skeleton layer, each vertex is influenced by a weighted average combination of bones 
+ 
  
  
 			<div class="page-header">
-        		<h2>Utilizar</h2>
+        		<h2>Esconder</h2>
 	      </div>
+
+<p>Tudo o que ficar coberto pela máscara vai ficar escondido.</p>
+
+
+
+
+
+			<div class="page-header">
+        		<h2>Mostrar</h2>
+	      </div>
+
+<p>Só mostra o que está coberto pela máscara.</p>
+
+
+<h3>Opção 1</h3>
     
-<p>1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
+<p>Opção 1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
 <p>2. Crie um Group Layer e insira a region criada.</p>
-<p>3. No Group Layer, crie New Layer > Other > Skeleton</p>
-<p>4. Crie esqueleto: child bones e redimensione influência</p>
-<p>5. Selecione region, selecione todos os pontos (CTRL+A)</p>
-<p>6. Selecione esqueleto: CTRL + Botão Esquerdo do Rato em cima do esqueleto</p>
-<p>7. BDRato em cima do esqueleto > Link to Skeleton</p>
 
+<h3>Opção 2</h3>
 
-
-<p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
-<p>Pode selecionar pontos individualmente e associar a bones específicos.</p>
 <p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
 
    	
