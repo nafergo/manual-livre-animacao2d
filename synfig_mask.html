@@ -5,7 +5,7 @@
 
 <meta name="description" content="Manual Livre de Animação 2D" /> 
 <meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
-<meta name="author" content="openlab" >
+<meta name="author" content="nafergo" >
 <meta charset="UTF-8">
 <title>Manual Livre de Animação em 2D</title>   
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -41,7 +41,7 @@
 				<h2>Introdução</h2>
       	</div>
       	
-      	<p>É comum surgir a necessidade de esconder ou mostrar objetos parcialmente. Imagine personagens 
+      	<p>É comum surgir a necessidade de esconder/mostrar objetos parcialmente. Imagine personagens 
       	que ficam tapadas pelo prédio mas visíveis na janela, por exemplo. As máscaras são 
       	extremamente úteis nestas tarefas. No Synfig, as máscaras são utilizada para esconder ou mostrar...
       	
@@ -56,7 +56,25 @@
         		<h2>Esconder</h2>
 	      </div>
 
-<p>Tudo o que ficar coberto pela máscara vai ficar escondido.</p>
+<p>Nos exemplos abaixo, o que ficar coberto pela máscara vai ficar escondido.</p>
+
+
+<p>1. Foram importadas duas imagens e foi criada uma forma do tipo Star. Esta última irá servir de máscara.</p>
+<p>Imagens utilizadas: <a href="http://pixabay.com/en/monitor-isolated-display-gray-313006/" target="_blank">Monitor</a> e 
+<a href="http://pixabay.com/en/tower-bridge-london-bridge-famous-768780/" target="_blank">Londres</a>.</p>
+<p>Atente na janela de layers para perceber a ordem e repare que a Group Layer com nome Londres ainda não está a ser utilizada.</p>
+
+    			 <img src="img/desenho/synfig/mask/1.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+
+
+<p>2. Selecione a Star e defina o Blend Mode (janela de parâmetros) para Alpha Over. A máscara vai servir para "abrir um buraco", removendo tudo o que estiver em baixo.</p>
+<img src="img/desenho/synfig/mask/2.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+
+
+<p>3. Com a utilização das Group Layers podemos organizar melhor o efeito do Alpha Over. No exemplo abaixo, a diferença é que a máscara e a imagem de 
+Londres estão no mesmo Group Layer (Londres). Ou seja, o efeito da máscara só vai ser aplicado às imagens que estiverem dentro do mesmo grupo.</p>
+<img src="img/desenho/synfig/mask/3.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+
 
 
 
@@ -66,17 +84,23 @@
         		<h2>Mostrar</h2>
 	      </div>
 
-<p>Só mostra o que está coberto pela máscara.</p>
+<p>Nos exemplos abaixo, o que ficar coberto pela máscara é o que vai ser mostrado.</p>
+<p>A diferença para os exemplos acima é a utilização da opção Invert.</p>
 
 
-<h3>Opção 1</h3>
-    
-<p>Opção 1. Desenhe uma Region. Crie os items/points que considerar necessários.</p>
-<p>2. Crie um Group Layer e insira a region criada.</p>
 
-<h3>Opção 2</h3>
+<p>1. A Star está acima das restantes layers. Ao ativar o parâmetro Invert, as layers abaixo da Star são escondidas/tapadas com a cor da Star e 
+o interior da Star funciona como uma abertura recortada.</p>
 
-<p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
+    			 <img src="img/desenho/synfig/mask/20.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+
+<p>2. O Blend Mode da Star foi alterado para Alpha Over. Ou seja, as layers abaixo da Star ficam transparentes e 
+o interior da Star funciona como uma abertura recortada.</p>
+
+    			 <img src="img/desenho/synfig/mask/21.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+    			 
+<p>3. Com a utilização das Group Layers podemos organizar melhor o efeito do Alpha Over. O efeito da máscara só vai ser aplicado às imagens qye estiverem dentro do mesmo grupo.</p>			 
+    			 <img src="img/desenho/synfig/mask/22.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
 
    	
    	</div>

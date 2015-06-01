@@ -5,7 +5,7 @@
 
 <meta name="description" content="Manual Livre de Animação 2D" /> 
 <meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
-<meta name="author" content="openlab" >
+<meta name="author" content="nafergo" >
 <meta charset="UTF-8">
 <title>Manual Livre de Animação em 2D</title>   
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -54,23 +54,39 @@ da câmara (com mais objetos sobrepostos) ou que se vai aproximando (com menos o
         		<h2>Utilizar</h2>
 	      </div>
     
-ou'll notice each layer you make has a number in the z depth column in the Layers Panel. Say you have 3 layers, they will be numbered 2 (lowest, e.g. a square) 1 (eg a circle) 0 (highest, the default, e.g. a line). In order to make layer 1, the circle, pass behind layer 2, the square, change its z depth to be 3 or more. The z depth of the circle needs to be greater than 2 in order to be behind the square. To make the square on top of everything, you'd change its z depth to -1 or less.
 
-Positive numbers on the z axis go into the screen, and negative numbers go out of the screen, towards the viewer.
 
-It is possible to animate this effect, but each layer is discrete. They seem to go from 0 to 0.9999.
 
-In addition, objects in grouped layers can only go behind other objects in the same grouped layer. However an grouped layer can go behind another grouped layer.
-Use a boolean parameter to hide a layer ?
+<p>1. Foram criados 2 retângulos (um preto e outro verde). Cada retângulo está no seu Group Layer. Na janela de layers, repare no valor Z Depth de cada Group Layer. Quanto mais elevado for o 
+valor de Z Depth, mais afastado da câmara. Como o Group Layer Preto tem 1 e o Group Layer Verde tem 0, os objetos contidos dentro do Group Layer Verde surgem sobrepostos aos contidos no 
+Group Layer Preto.</p>
 
-You can use set the amount's layer parameter to Constant Interpolation.
+   			 <img src="img/animacao/synfig/sobrepor/1.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
 
-Or you can convert the Amount Parameter to a Switch value and give 0 and 1 to the Linked OFF/ON values. 
 
-<p>Os resultados da distorção são melhores se a sua forma tiver mais pontos.</p>
-<p>Pode selecionar pontos individualmente e associar a bones específicos.</p>
-<p>Na janela de parâmetros pode ver qual o bone (e alterar) que está a associado a cada ponto.</p>
 
+<p>2. Desenhe um novo retângulo e coloque-o no topo da janela das Layers. Repare que os valores de Z Depth da janela de layers 
+foram alterados para refletir a nova hierarquia: retângulo vermelho é o 0, o Group Verde é agora 1 e o Group Preto passou a 2.</p>
+   			 <img src="img/animacao/synfig/sobrepor/2.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+
+
+<p>3. Atente na janela de propriedades (lado esquerdo) onde estão presentes os diversos parâmetros de cada layer. Repare que todas as layers têm um valor de Z Depth nos seus parâmetros e 
+que, por pré-definição, esse valor é 0. Ou seja, sempre que cria uma nova layer, esta automaticamente tem um Z Depth de 0.</p>
+
+<p>O valor de Z Depth que surge na janela de layers é utilizado para hierarquizar facilmente objetos/layers que precisam de 
+ser sempre hierarquizadas (duas layers não podem estar ao mesmo nível, uma tem de estar em cima ou em baixo da outra). Se não alterar o valor de Z Depth na janela de parâmetros, o valor 
+de Z Depth da janela de layers altera-se de acordo com a hierarquia das layers.</p>
+<p>No entanto, pode alterar manualmente o valor de Z Depth da layer na janela de parâmetros</p>
+   			 <img src="img/animacao/synfig/sobrepor/3.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+<p>4. E este valor nos parâmetros também pode ser animado...</p>
+
+   			 <img src="img/animacao/synfig/sobrepor/4.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+
+
+   			 
    	
    	</div>
 	</div>

@@ -5,7 +5,7 @@
 
 <meta name="description" content="Manual Livre de Animação 2D" /> 
 <meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
-<meta name="author" content="openlab" >
+<meta name="author" content="nafergo" >
 <meta charset="UTF-8">
 <title>Manual Livre de Animação em 2D</title>   
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -46,27 +46,61 @@
      pretende importar e animar as mesmas no Synfig...</p>
      
         
- 
+     		      			      		   
  
  
 			<div class="page-header">
         		<h2>Utilizar</h2>
 	      </div>
+
+<p>Neste exercício, iremos utilizar a imagem disponível <a href="https://openclipart.org/detail/78877/bat" target="_blank">aqui</a>.</p>
     
-<p>1. Importe as imagens</p>
+<p>1. Importe a imagem que irá ser deformada. Comece por criar uma layer do tipo Import Image, depois selecione a imagem a importar através do parâmetro Filename.</p>
+
+    			 <img src="img/animacao/synfig/skeleton_deformation/1.jpg" alt="..." class="img-responsive img-thumbnail center-block">
+
+    			 <img src="img/animacao/synfig/skeleton_deformation/2.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+    			 
+    			 
+<p>2. Adicione uma Skeleton Deformation Layer.</p>   
+
+    			 <img src="img/animacao/synfig/skeleton_deformation/3.jpg" alt="..." class="img-responsive img-thumbnail center-block">   
+    			 
+
+<p>3. Desative a funcionalidade de deformação para poder editar a posição dos "bones"/armadura sem problemas.</p> 		  			 
+    			 
+    			 <img src="img/animacao/synfig/skeleton_deformation/4.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
 
 
-<p>2. Adicione uma Skeleton Deformation Layer</p>   
+<p>4. Configure a armadura a seu gosto. </p>
 
-<p>3. Desative a funcionalidade de deformação para poder editar a posição dos "bones"/armadura sem problemas.</p> 
+<p>Crie Child Bones (clique com botão direito do rato em cima do bone e escolha Create Child Bone). 
+No exemplo, existem dois Child Bones nas asas. Mova o ponto verde de cada bone para o local onde vai existir a rotação e utilize o ponto castanho para definir 
+o comprimento de cada bone.</p>
+<p>Defina o raio de influência de cada bone através dos pontos rosa. O círculo representa a área de influência de cada uma das extremidades do bone.</p>
+    			 
+    			 <img src="img/animacao/synfig/skeleton_deformation/5.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+
+<p>5. Depois de ter criado a sua armadura, faça Reset the Pose (botão direito do rato em cima da Skeleton Deformation Layer) e volte a ativar a funcionalidade de deformação.</p>   			 
+    			 <img src="img/animacao/synfig/skeleton_deformation/6.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+    
+    
+<p>6. Anime os bones para conseguir animar a deformação da imagem importada.</p>    			 
+    			 <img src="img/animacao/synfig/skeleton_deformation/7.jpg" alt="..." class="img-responsive img-thumbnail center-block">    			 
+    			 
+    			     			     			     			     			     			 
 
 
-<p>4. Configure a armadura</p>
-- Build the skeleton + Create Child Bone + set the influence area for each bone.
 
-<p>5. Reset the Pose e ative a funcionalidade de deformação</p>
 
-<p>6. anime os bones</p>
+
+
+
+
+
+
+
+
 
 
    	

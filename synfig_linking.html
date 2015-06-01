@@ -5,7 +5,7 @@
 
 <meta name="description" content="Manual Livre de Animação 2D" /> 
 <meta name="keywords" content="Blender, Synfig, Tupi, Pencil2D, Free Software, Libre Software, Open Source, Free Culture, Animation, 2D, Animação, Illustration, Ilustração, Education, Educação, Software Livre">
-<meta name="author" content="openlab" >
+<meta name="author" content="nafergo" >
 <meta charset="UTF-8">
 <title>Manual Livre de Animação em 2D</title>   
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -50,22 +50,29 @@
 	      </div>
     
 
-<p>1. Desenhe uma Circle Region e um Rectangle Region. </p>
-Linking
+<p>1. Desenhe uma Circle Region e um Rectangle Region. Crie uma Group Layer para cada um dos objetos criados.</p>
 
-Now let's try linking. Suppose we always want these two circles to be the same
- size. Select two circles, and then select both of their radius handles (the cyan dots).
 
-To select multiple handles, either drag a rectangle around them, or select
- the first one, then hold the Ctrl key while selecting the rest. Once you have the two
-  radius handles selected, right click on either of them and a menu will pop up. Select
-   "Link". Boom. The parameters are linked together. You can prove it to yourself by selecting
-    just one of the circles and changing its radius — the other one will change as well. Neat
-     stuff, eh? This is how outlines are attached to their regions — but we're getting ahead of to the chapter.
+   			 <img src="img/desenho/synfig/linkar/1.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
 
-Linking is a fundamental concept in Synfig. You can create links not only for
- handles, but also between parameters as well by selecting multiple layers, right clicking on
-  the parameter in the Parameters panel, and selecting "Link". 
+<p>2. Selecione as duas Group Layers na janela de layers. 
+Selecione os dois centros (pontos verdes) das duas Group Layers, clique no botão direito do rato em cima de um dos pontos verdes e escolha a opção Link. Para selecionar 
+vários pontos, utilize o CTRL: desenhe uma caixa à volta do primeiro ponto e enquanto clica no CTRL selecione o segundo ponto.</p>
+<p>As duas Group Layers estão agora linkadas.</p>
+   			 <img src="img/desenho/synfig/linkar/2.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+<p>3. Se manipular uma Group Layer (rodar, etc.), a mesma operação é aplicada na segunda Group Layer. </p>
+
+   			 <img src="img/desenho/synfig/linkar/3.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+
+<p>4. A linkagem pode ser feita para outros parâmetros. Por exemplo, pode apenas linkar a cor de duas layers. Para isso, depois de selecionar as duas layers que pretende 
+linkar, clique com o botão direito do rato em cima do parâmetro da cor e escolha opção Link.</p>
+
+   			 <img src="img/desenho/synfig/linkar/4.jpg" alt="..." class="img-responsive img-thumbnail center-block">     		      			      		   
+
+<p>Para quebrar a linkagem, clique no botão direito do rato em cima do parâmetro linkado e escolha Disconnet.</p>
+
 
 
    	
